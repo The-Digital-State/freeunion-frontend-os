@@ -1,0 +1,18 @@
+.arrowButton {
+  border: none;
+  background-color: unset;
+
+  display: flex;
+  margin: 10px;
+
+  span {
+    font-size: 0;
+  }
+
+  &:disabled {
+    cursor: default;
+    svg path {
+      stroke: gray;
+    }
+  }
+}

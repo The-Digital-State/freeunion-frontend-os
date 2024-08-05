@@ -1,0 +1,42 @@
+@import '../../styles/variables/grid';
+
+.header {
+  @media #{$breakpoint-sm-up} {
+    display: flex;
+    flex-wrap: nowrap;
+    box-sizing: border-box;
+  }
+
+  &__logo {
+    width: 24vw;
+
+    @media #{$breakpoint-sm-up} {
+      flex: 0 0 102px;
+      margin-right: 33px;
+      box-sizing: border-box;
+    }
+
+    @media #{$breakpoint-xl-up} {
+      flex-basis: 138px;
+      margin-right: 60px;
+    }
+  }
+
+  &__title {
+    position: relative;
+
+    h1 {
+      text-align: right;
+
+      @media #{$breakpoint-sm-up} {
+        text-align: left;
+      }
+    }
+
+    @media #{$breakpoint-sm-up} {
+      flex: 0 1 auto;
+      margin-top: 0;
+      box-sizing: border-box;
+    }
+  }
+}

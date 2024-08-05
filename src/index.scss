@@ -1,0 +1,142 @@
+@import 'styles/typography/common';
+@import 'styles/typography/headers';
+
+@import 'styles/structure/common';
+@import 'styles/structure/header';
+@import 'styles/structure/content';
+@import 'styles/structure/footer';
+
+@import 'styles/variables/common';
+@import 'styles/variables/colors';
+@import 'styles/variables/grid';
+@import 'styles/variables/typography';
+@import 'styles/variables/indention';
+
+@import 'styles/form/form-group';
+
+@import 'styles/modules/scales';
+@import 'shared/styles/global.scss';
+@import 'styles/cookiebot';
+@import 'react-toastify/dist/ReactToastify.css';
+
+:root {
+  // TODO: continue:
+  --red: #{$red};
+  --primary-color: #{$primary};
+
+  --primary-bg: linear-gradient(138.63deg, #7c87bf 26.98%, #b8bfe6 100%);
+  --primary-bg-trans-15: linear-gradient(138.63deg, rgba(130, 142, 204, 0.15) 26.98%, rgba(198, 196, 241, 0.15) 100%);
+  --primary-bg-trans-30: linear-gradient(138.63deg, rgba(130, 142, 204, 0.15) 26.98%, rgba(198, 196, 241, 0.3) 100%);
+}
+
+* {
+  box-sizing: border-box;
+  font-family: 'Jost', sans-serif;
+}
+
+html,
+body,
+p,
+  //h1,
+  //h2,
+h3,
+h4,
+footer {
+  margin: 0;
+}
+
+//html,
+//body {
+//}
+
+body {
+  overflow-y: auto;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
+
+  @media #{$breakpoint-sm-only-max} {
+    margin-bottom: 3rem !important;
+  }
+}
+
+div#root {
+}
+
+ul,
+li {
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+button {
+  cursor: pointer;
+
+  &:disabled {
+    cursor: not-allowed;
+  }
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+.bg-primary {
+  background-color: $primary;
+}
+
+.bg-secondary {
+  background-color: $secondary;
+}
+
+.bg-grey-1 {
+  background-color: $gray-1;
+}
+
+.bg-grey-2 {
+  background-color: $gray-2;
+}
+
+.bg-grey-3 {
+  background-color: $gray-3;
+}
+
+.bg-grey-4 {
+  background-color: $gray-4;
+}
+
+.color-primary {
+  color: $primary;
+}
+
+.color-secondary {
+  color: $secondary;
+}
+
+.color-grey-1 {
+  color: $gray-1;
+}
+
+.color-grey-2 {
+  color: $gray-2;
+}
+
+.color-grey-3 {
+  color: $gray-3;
+}
+
+.with-radius {
+  border-radius: $border-radius;
+}
+
+.danger {
+  color: $error;
+}

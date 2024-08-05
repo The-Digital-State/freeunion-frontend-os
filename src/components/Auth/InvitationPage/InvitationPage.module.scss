@@ -1,0 +1,51 @@
+@import 'src/styles/variables/grid';
+@import 'src/styles/variables/colors';
+@import 'src/styles/variables/common';
+
+.InvitationPage {
+  height: 100%;
+  display: grid;
+  grid-gap: $grid-gap;
+
+  border-radius: $border-radius;
+  background-color: $gray-1;
+  width: 100%;
+
+  @media #{$breakpoint-lg-up} {
+    grid-gap: calc(#{$grid-gap} * 3);
+
+    width: 700px;
+  }
+
+  h2 {
+    margin-top: 0;
+  }
+
+  h3 {
+    display: flex;
+    align-items: center;
+    vertical-align: middle;
+
+    @media #{$breakpoint-md-only-max} {
+      flex-direction: column;
+    }
+  }
+}
+
+.imageContainer {
+  display: flex;
+  margin: 0 1.25rem;
+}
+
+.buttons {
+  display: flex;
+  align-items: center;
+
+  span {
+    margin: 10px 15px;
+  }
+
+  @media #{$breakpoint-xs-only} {
+    flex-direction: column;
+  }
+}

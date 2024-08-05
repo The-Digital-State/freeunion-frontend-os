@@ -1,0 +1,57 @@
+@import '../../styles/variables/grid';
+
+.scales {
+  &__top {
+    position: absolute;
+    left: -390px;
+    top: -270px;
+    margin-left: 67%;
+    margin-top: 36%;
+
+    width: 970px;
+    height: 780px;
+    background: url('/public/bg-top.svg');
+    background-size: cover;
+    opacity: 0.5;
+    z-index: -1;
+
+    @media #{$breakpoint-sm-up} {
+      left: -191px;
+      top: -400px;
+    }
+
+    @media #{$breakpoint-md-up} {
+      left: -92px;
+      top: -50px;
+      margin-top: 0;
+      opacity: 1;
+    }
+
+    @media #{$breakpoint-lg-up} {
+      left: -170px;
+      top: -50px;
+    }
+  }
+
+  &__side {
+    position: absolute;
+    left: -240px;
+    top: 1000px;
+
+    width: 645px;
+    height: 1222px;
+    background: url('/public/bg-side.svg');
+    background-size: cover;
+    opacity: 0.7;
+    z-index: -1;
+
+    transform: translateZ(-1px);
+  }
+
+  &__side:nth-child(2n + 1) {
+    left: auto;
+    right: -240px;
+
+    transform: scaleX(-1);
+  }
+}

@@ -1,0 +1,122 @@
+@import '../../styles/variables/grid';
+@import '../../styles/variables/typography';
+@import '../../styles/variables/colors';
+@import '../../styles/variables/common';
+
+input {
+  position: relative;
+  padding: 15px 27px 15px;
+  width: 100%;
+  height: 60px;
+  font-style: normal;
+  font-weight: normal;
+  font-size: $text-fields-font-size-mobile;
+  line-height: $text-fields-line-height-mobile;
+  color: $black;
+  background: $text-field-bg;
+  border: 3px solid $text-field-bg;
+  border-radius: 15px;
+  box-sizing: border-box;
+  outline: none;
+
+  @media #{$breakpoint-md-up} {
+    font-size: $text-fields-font-size-desktop;
+    line-height: $text-fields-line-height-desktop;
+  }
+
+  &.gray {
+    background: $text-field-bg;
+  }
+
+  &.white {
+    background: $white !important;
+  }
+
+  &:disabled {
+    background-color: $gray-2 !important;
+    color: $gray-3;
+    border-color: $input-disabled-border-color;
+  }
+}
+
+:global .react-datepicker-wrapper {
+  width: 100%;
+}
+
+:global .react-datepicker-popper {
+  z-index: 10 !important;
+}
+
+:global .react-datepicker__tab-loop {
+  .react-datepicker__triangle:before,
+  .react-datepicker__triangle:after {
+    left: -20px !important;
+  }
+}
+
+:global .react-datepicker__header {
+  background-color: $white !important;
+
+  @media #{$breakpoint-xs-only} {
+    width: 100vw !important;
+  }
+
+  :local .customControl {
+    display: grid;
+    grid-template-areas: 'previous-month year next-month' 'previous-month month next-month';
+    grid-template-columns: auto 1fr auto;
+    max-width: 100vw;
+    grid-gap: $grid-gap;
+    padding: 0 $grid-gap;
+    align-items: center;
+
+    @media #{$breakpoint-sm-up} {
+      grid-template-areas: 'previous-month year month next-month';
+      grid-template-columns: auto 1fr 1fr auto;
+    }
+
+    .previousMonth {
+      grid-area: previous-month;
+    }
+
+    .year {
+      grid-area: year;
+    }
+
+    .month {
+      grid-area: month;
+    }
+
+    .nextMonth {
+      grid-area: next-month;
+    }
+  }
+
+  .buttonNextPrev {
+    max-width: fit-content;
+    width: 3rem;
+  }
+
+  width: 500px;
+
+  .form-group {
+    margin: 0;
+    width: auto;
+  }
+}
+
+:global .react-datepicker__day {
+  &:hover {
+    background-color: $gray-1;
+  }
+
+  &--selected {
+    background-color: $calendar-selected-day-color !important;
+  }
+}
+
+:global .react-datepicker__day--keyboard-selected {
+  border-color: $gray-2 !important;
+  background-color: $gray-1 !important;
+  color: $gray-3 !important;
+}

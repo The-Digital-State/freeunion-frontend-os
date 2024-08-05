@@ -1,0 +1,33 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+  img {
+    margin: 10px 0;
+    border-radius: 15px;
+    max-width: 1000px;
+  }
+  & > p,
+  & > h3 {
+    max-width: 1000px;
+    width: 100%;
+    text-align: left;
+  }
+  & > p {
+    font-size: 20px;
+  }
+  h3 {
+    margin-bottom: 20px;
+  }
+  ul {
+    max-width: 1000px;
+    width: 100%;
+    li {
+      font-size: 20px;
+    }
+  }
+  footer {
+    width: 100%;
+  }
+}

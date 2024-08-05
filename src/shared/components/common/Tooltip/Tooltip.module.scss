@@ -1,0 +1,29 @@
+@import '../../../styles/variables/colors';
+
+.tooltip {
+  position: relative;
+
+  .tooltiptext {
+    position: absolute;
+    visibility: hidden;
+    display: block;
+    opacity: 0;
+    width: 100%;
+    background: $primary;
+    color: #fff;
+    text-align: center;
+    padding: 5px 0;
+    border-radius: 6px;
+
+    z-index: 1;
+    left: 0;
+    top: 100%;
+    transition: all 0.3s ease;
+  }
+  &:hover {
+    .tooltiptext {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+}

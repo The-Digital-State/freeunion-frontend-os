@@ -1,0 +1,20 @@
+.wrapper {
+  max-width: 480px;
+  margin: auto;
+  > p {
+    margin: 20px 0;
+  }
+  > img {
+    margin: 20px auto;
+  }
+
+  ul {
+    margin-left: 20px;
+  }
+
+  form {
+    p {
+      margin-bottom: 10px;
+    }
+  }
+}

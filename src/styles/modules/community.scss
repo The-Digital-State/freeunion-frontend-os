@@ -1,0 +1,40 @@
+@import '../../styles/variables/colors';
+@import '../../styles/variables/grid';
+
+.community {
+  margin-right: 76px;
+  padding: 25px 80px;
+  background: $gradient-1;
+  border-radius: 15px;
+  box-sizing: border-box;
+
+  &__title {
+    margin-bottom: 20px;
+    font-size: 1.4em;
+    line-height: 1.4;
+  }
+}
+
+.slider__community {
+  position: relative;
+  margin-right: -1rem;
+
+  @media #{$breakpoint-sm-up} {
+    margin-right: -2.7rem;
+  }
+
+  @media #{$breakpoint-md-up} {
+    margin-right: -2.7rem;
+  }
+
+  @media #{$breakpoint-xl-up} {
+    margin-right: -4.4rem;
+  }
+
+  &__controls {
+    position: absolute;
+    top: -6vw;
+    right: 100px;
+    margin-top: -20px;
+  }
+}

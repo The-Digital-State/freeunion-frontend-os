@@ -1,0 +1,31 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  background: white;
+  min-width: 500px;
+  
+  .ThreadMessage {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .threadHeader {
+    min-height: 68px;
+    border-bottom: 3px solid rgba(130, 142, 204, 0.15);
+    padding: 0 8px;
+    margin-bottom: 16px;
+    display: flex;
+    align-items: center;
+
+    p {
+      margin-bottom: 0;
+      margin-top: 0;
+    }
+  }
+  .threadContent {
+    flex-grow: 1;
+    overflow: auto;
+  }
+}

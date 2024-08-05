@@ -1,0 +1,46 @@
+@import 'src/styles/variables/grid';
+
+.wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+  width: 100%;
+  background: var(--primary-bg-trans-15);
+  padding: 30px 50px;
+  border-radius: 0 0 30px 30px;
+  @media screen and (max-width: 764px) {
+    border-radius: 0;
+    padding: 15px;
+  }
+
+  .suggestionButton button {
+    max-width: 356px;
+  }
+
+  @media screen and (max-width: 550px) {
+    & .suggestionButton button {
+      justify-content: center;
+      svg {
+        display: none;
+      }
+    }
+  }
+
+  @media screen and (max-width: 450px) {
+    padding: 10px 15px;
+    flex-direction: column;
+
+    .suggestionButton {
+      width: 100%;
+
+      button {
+        max-width: 100%;
+      }
+    }
+  }
+
+  & > p {
+    margin: 0;
+  }
+}

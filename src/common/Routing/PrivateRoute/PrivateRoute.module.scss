@@ -1,0 +1,25 @@
+@import 'src/styles/variables/common';
+@import 'src/styles/variables/grid';
+
+.MainContainer {
+  transition: padding-right $animation-duration;
+
+  &.withSidebar {
+    @media #{$breakpoint-md-up} {
+      padding-right: $sidebar-size-mobile;
+    }
+
+    @media #{$breakpoint-lg-up} {
+      padding-right: $sidebar-size-desktop;
+    }
+  }
+}
+
+.Main {
+  display: flex;
+  flex-direction: column;
+
+  @media #{$breakpoint-sm-only-max} {
+    max-width: 100vw;
+  }
+}

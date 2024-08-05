@@ -1,0 +1,43 @@
+@import 'src/styles/variables/grid';
+@import 'src/styles/variables/common';
+
+.Tasks {
+  scroll-snap-type: y mandatory;
+
+  .tabsContainer {
+    margin-top: 20px;
+    position: relative;
+    padding-right: 40px;
+    padding-right: 40px;
+
+    @media #{$breakpoint-md-only-max} {
+      scroll-snap-align: start;
+      scroll-snap-stop: normal;
+
+      width: 100vw;
+      transition: height $animation-duration;
+    }
+
+    @media #{$breakpoint-md-up} {
+      min-height: 665px;
+    }
+  }
+}
+
+.container {
+  min-height: 500px;
+  background: var(--primary-bg-trans-15);
+  > div {
+    display: flex;
+    flex-grow: 1;
+    flex-shrink: 1;
+    overflow-x: auto;
+    overflow-y: hidden;
+    padding: 20px;
+    max-height: 500px;
+    height: calc(var(--vh, 1vh) * 100);
+    @media screen and (max-width: 764px) {
+      padding: 10px;
+    }
+  }
+}

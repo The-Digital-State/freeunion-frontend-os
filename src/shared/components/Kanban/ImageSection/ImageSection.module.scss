@@ -1,0 +1,22 @@
+.wrapper {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+
+  .content {
+    align-items: center;
+    display: flex;
+    margin-right: 16px;
+    margin-bottom: 16px;
+
+    img {
+      border-radius: 14px;
+    }
+    .buttonWrapper {
+      display: flex;
+      flex-direction: column;
+      margin-left: 2px;
+      align-items: 'flex-start';
+    }
+  }
+}

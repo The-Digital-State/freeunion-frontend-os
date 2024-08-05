@@ -1,0 +1,83 @@
+@import '../../styles/variables/colors';
+
+.page {
+  &__login {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 60px;
+    min-height: 100%;
+    box-sizing: border-box;
+
+    h1 {
+      font-size: 100px;
+      text-align: right;
+    }
+
+    h3 {
+      margin-bottom: 18px;
+      margin-left: 30px;
+      font-size: 25px;
+      text-align: left;
+    }
+
+    .header {
+      display: flex;
+      box-sizing: border-box;
+
+      &__logo {
+        flex: 0 1 auto;
+        box-sizing: border-box;
+      }
+
+      &__title {
+        flex: 0 1 auto;
+        box-sizing: border-box;
+      }
+    }
+
+    form {
+      .form-group {
+        width: 50%;
+
+        &__actions {
+          text-align: center;
+
+          a {
+            margin-top: 10px;
+            display: inline-block;
+            color: $black;
+          }
+        }
+      }
+    }
+  }
+
+  &__register,
+  &__edit-account {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 100%;
+    box-sizing: border-box;
+
+    h3.scope {
+      max-width: 1022px;
+    }
+
+    form {
+      margin: 0 auto;
+      max-width: 1022px;
+
+      .form-group__actions {
+        text-align: center;
+
+        a {
+          margin-top: 10px;
+          display: inline-block;
+          color: $black;
+        }
+      }
+    }
+  }
+}

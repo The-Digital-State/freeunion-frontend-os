@@ -1,0 +1,22 @@
+.wrapperTags {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  .tag {
+    text-transform: lowercase;
+    margin-right: 10px;
+    display: block;
+    background: var(--primary-bg-trans-30);
+    padding: 0 10px;
+    border-radius: 15px;
+    margin-bottom: 10px;
+    color: black;
+
+    &:hover {
+      opacity: 1;
+      text-decoration: underline;
+    }
+  }
+}

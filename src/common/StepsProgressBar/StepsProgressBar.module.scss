@@ -1,0 +1,49 @@
+@import '../../styles/variables/colors';
+@import '../../styles/variables/common';
+
+$progress-border-radius: 8px;
+$progress-height: 20px;
+
+.StepsProgressBar {
+  display: flex;
+  align-items: center;
+
+  .progressBar {
+    flex: 1;
+    background-color: $gray-2;
+    border-radius: $progress-border-radius;
+    height: $progress-height;
+    position: relative;
+
+    & > span {
+      display: block;
+      height: $progress-height;
+      background-color: $primary;
+      border-radius: $progress-border-radius;
+      position: relative;
+      text-indent: -9999px;
+      transition: width $animation-duration;
+
+      &:not(.full) {
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+      }
+
+      &:not(.full):after {
+        content: 'A';
+        position: absolute;
+        right: -15px;
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 10px 0 10px 15px;
+        border-color: transparent transparent transparent $primary;
+        border-radius: 0;
+      }
+    }
+  }
+
+  .text {
+    margin-left: 1rem;
+  }
+}

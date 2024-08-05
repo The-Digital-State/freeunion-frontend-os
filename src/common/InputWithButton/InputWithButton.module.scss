@@ -1,0 +1,33 @@
+@import 'src/styles/variables/grid';
+
+.InputWithButton {
+  display: grid;
+  grid-template-rows: auto auto;
+
+  @media #{$breakpoint-md-up} {
+    grid-template-columns: 1fr auto;
+    grid-template-rows: 1fr;
+  }
+
+  @media #{$breakpoint-sm-only-max} {
+    .formGroup {
+      margin: 0;
+      padding: 0;
+    }
+  }
+
+  @media #{$breakpoint-md-up} {
+    input {
+      border-top-right-radius: 0 !important;
+      border-bottom-right-radius: 0 !important;
+      border-right: none;
+    }
+
+    button {
+      margin-top: 0;
+      border-bottom-left-radius: 0 !important;
+      border-top-left-radius: 0 !important;
+      min-height: 60px;
+    }
+  }
+}

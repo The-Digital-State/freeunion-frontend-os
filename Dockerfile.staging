@@ -1,0 +1,16 @@
+FROM node:14-alpine
+
+WORKDIR /app
+
+COPY package.json package-lock.json ./
+
+RUN npm ci
+
+COPY . ./
+RUN cd src/shared && npm ci
+
+COPY .env.staging .env.production
+
+RUN npm run build-ssr
+
+CMD ["npm", "run", "start-server"]

@@ -1,0 +1,65 @@
+@import '/src/styles/variables/grid';
+
+.hierarchy {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-top: 30px;
+
+  // > h2 {
+  //   margin: 2em 0;
+  // }
+
+  @media #{$breakpoint-md-up} {
+    flex-direction: row;
+
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  &__wraptable {
+    @media #{$breakpoint-md-up} {
+      width: 60%;
+    }
+  }
+
+  &__table {
+    svg {
+      width: 100%;
+    }
+    rect {
+      fill: transparent;
+    }
+  }
+
+  &__about {
+    @media #{$breakpoint-md-up} {
+      width: 35%;
+    }
+
+    &-title {
+      display: flex;
+      margin-bottom: 30px;
+      &-img {
+        width: 30px;
+        height: 30px;
+      }
+      h3 {
+        font-size: 25px;
+        line-height: 35px;
+        text-transform: uppercase;
+        color: #000000;
+        margin-left: 10px;
+      }
+    }
+
+    &-text {
+      display: inline-block;
+      margin-bottom: 118px;
+      font-size: 18px;
+      line-height: 30px;
+      color: #000000;
+    }
+  }
+}

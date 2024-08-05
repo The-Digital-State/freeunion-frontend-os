@@ -1,0 +1,28 @@
+.slider {
+  &__frame {
+    transition: left 0.5s;
+  }
+
+  &__item {
+    box-sizing: border-box;
+  }
+
+  &__controls {
+    &__left,
+    &__right {
+      display: inline-block;
+      width: 12px;
+      height: 19px;
+      cursor: pointer;
+    }
+
+    &__left {
+      margin-right: 25px;
+      background: url('/public/arrow-left.svg');
+    }
+
+    &__right {
+      background: url('/public/arrow-right.svg');
+    }
+  }
+}

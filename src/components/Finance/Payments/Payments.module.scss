@@ -1,0 +1,98 @@
+$primaty-count: linear-gradient(138.63deg, #828ecc 26.98%, #c6c4f1 100%);
+
+.payments {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  flex-shrink: 1;
+  overflow-x: auto;
+  overflow-y: auto;
+  max-height: none;
+  padding: 20px;
+  width: 100%;
+  background: var(--primary-bg-trans-15);
+  @media screen and (max-width: 560px) {
+    padding: 10px;
+  }
+
+  .wrapper {
+    @media screen and (max-width: 764px) {
+      margin: 0 10px;
+      width: auto !important;
+    }
+  }
+
+  .paymentTypeText {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    span {
+      text-transform: uppercase;
+      margin: 0;
+    }
+  }
+
+  .financeDropDown {
+    padding-right: 5px;
+    overflow-y: auto;
+  }
+  .payButtonWrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    @media screen and (max-width: 550px) {
+      flex-direction: column;
+    }
+    .payButton {
+      max-width: 65%;
+      @media screen and (max-width: 550px) {
+        max-width: 100%;
+        height: 40px;
+        min-height: auto;
+        font-size: 14px;
+        min-width: none;
+        min-width: fit-content;
+      }
+    }
+  }
+  .paidCount {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    @media screen and (max-width: 550px) {
+      width: 100%;
+      justify-content: flex-end;
+    }
+
+    span {
+      font-weight: 500;
+      margin-right: 10px;
+    }
+    .count {
+      width: fit-content;
+      padding: 0 10px;
+      height: 40px;
+      background: $primaty-count;
+      color: #fff;
+      font-size: 18px;
+      border-radius: 15px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+}
+
+.helpOrganization {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  h3 {
+    text-align: center;
+  }
+}

@@ -1,0 +1,29 @@
+@import 'src/styles/variables/colors';
+@import 'src/styles/variables/common';
+
+.NoMoreSuggestions {
+  display: grid;
+  grid-template-rows: 1fr auto;
+
+  .content {
+    overflow-y: auto;
+
+    h3 {
+      @media #{$breakpoint-xs-only} {
+        font-size: 1rem;
+      }
+    }
+
+    .organisationAvatar {
+      display: flex;
+      justify-content: center;
+      margin: 1rem 0;
+    }
+  }
+
+  .footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}

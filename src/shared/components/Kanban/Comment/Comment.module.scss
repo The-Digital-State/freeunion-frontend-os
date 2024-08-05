@@ -1,0 +1,60 @@
+.wrapper {
+  display: flex;
+  align-items: center;
+  max-width: 750px;
+      max-width: 590px;
+  img {
+    min-width: 40px;
+  }
+
+  .commentContent {
+    margin-left: 16px;
+    .text {
+      display: flex;
+      align-items: center;
+      .name {
+        font-size: 0.875rem;
+        line-height: 1.43;
+        color: #172b4d;
+        font-weight: 500;
+        margin: 0px 8px 0px 0px;
+      }
+      .comment {
+        font-size: 0.875rem;
+        line-height: 1.43;
+        color: #172b4d;
+        max-width: 590px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+    }
+    .footer {
+      display: flex;
+      align-items: center;
+      margin-top: -16px;
+      .time {
+        margin: 0;
+        font-weight: 400;
+        font-size: 0.75rem;
+        line-height: 1.66;
+        color: #4455ea;
+        margin-right: 8px;
+      }
+    }
+  }
+  .inputWrapper {
+    margin-left: 16px;
+    width: 100%;
+    > div {
+      input {
+        border: 1px solid #ccc !important;
+      }
+    }
+  }
+}
+
+.editing {
+  display: flex;
+  width: 100%;
+  align-items: center;
+}

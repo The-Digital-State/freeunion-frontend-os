@@ -1,0 +1,92 @@
+@import '../../../styles/variables/colors';
+@import '../../../styles/variables/common';
+@import '../../../styles/variables/grid';
+@import '../../../styles/typography/common';
+
+.SuggestionsList {
+  overflow: hidden;
+  height: 100%;
+  padding-right: 20px;
+  min-height: 420px;
+
+  @media screen and (max-width: 1024px) {
+    min-height: 460px;
+  }
+  @media screen and (max-width: 767px) {
+    min-height: inherit;
+    padding-right: 0;
+    max-height: 400px;
+  }
+  .scrollButton {
+    display: grid;
+    grid-template-columns: 50px 6fr;
+    grid-gap: $grid-gap;
+    height: 3rem;
+    align-items: center;
+
+    &.disabled {
+      opacity: 0.1;
+      transition: opacity $animation-duration;
+      pointer-events: none;
+      cursor: auto;
+    }
+  }
+
+  .scrollContainer {
+    position: relative;
+    overflow: auto;
+    height: 100%;
+
+    &.withScrollButtons {
+      height: calc(100% - 108px);
+    }
+  }
+
+  .suggestion {
+    display: grid;
+    grid-template-columns: 50px 6fr;
+    grid-gap: $grid-gap;
+    align-items: baseline;
+    min-height: 40px;
+
+    @media #{$breakpoint-md-up} {
+      grid-template-columns: minmax(0, 0.8fr) 1fr 6fr;
+      grid-gap: 0;
+      align-items: center;
+    }
+
+    .icon {
+      display: grid;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+
+      @media #{$breakpoint-sm-only-max} {
+        display: none;
+      }
+    }
+
+    .likesCount {
+      span {
+        background-color: $white;
+        border-radius: $border-radius;
+        padding: 5px 10px;
+      }
+    }
+
+    .suggestionText {
+      cursor: pointer;
+      color: black;
+
+      &:hover {
+        opacity: 0.8;
+      }
+    }
+
+    &.voted {
+      .likesCount {
+        color: $primary;
+      }
+    }
+  }
+}

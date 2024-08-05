@@ -1,0 +1,25 @@
+@import '../../../styles/variables/colors';
+
+svg {
+  display: inline-block;
+
+  &.primary path {
+    stroke: $primary;
+  }
+
+  &.secondary path {
+    stroke: $secondary;
+  }
+
+  &.disabled path {
+    stroke: $icon-disabled;
+  }
+
+  &.black path {
+    stroke: black;
+  }
+
+  &.white path {
+    stroke: #fff;
+  }
+}

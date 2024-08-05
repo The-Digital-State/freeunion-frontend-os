@@ -1,0 +1,30 @@
+@import '../../styles/variables/colors';
+@import '../../styles/variables/common';
+
+#svg circle {
+  stroke-dashoffset: 0;
+  transition: stroke-dashoffset $animation-duration linear;
+  stroke: $gray-1;
+  stroke-width: 3px;
+  transform: rotateZ(-90deg);
+}
+
+#svg #bar {
+  stroke: $primary;
+}
+
+#cont {
+  border-radius: 100%;
+  position: relative;
+
+  .text {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+}

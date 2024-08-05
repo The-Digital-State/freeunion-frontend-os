@@ -1,0 +1,181 @@
+@import '/src/styles/variables/colors';
+@import '/src/styles/variables/grid';
+@import '/src/styles/variables/common';
+@import '/src/styles/variables/indention';
+@import '/src/styles/variables/typography';
+
+.SimpleRoutingContainer {
+  max-width: 1920px;
+  min-height: calc(var(--vh, 1vh) * 100);
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  padding: $space-mobile $space-mobile 0;
+
+  @media #{$breakpoint-lg-up} {
+    padding: 40px 40px 0 40px;
+  }
+
+  @media screen and (max-width: 764px) {
+    padding: 10px 10px 0;
+  }
+
+  .title {
+    margin: 0;
+    font-style: normal;
+    font-weight: normal;
+    font-size: $h2-font-size-mobile;
+    line-height: $h2-line-height-mobile;
+    color: $black;
+    text-align: left;
+    text-transform: uppercase;
+    padding-right: 40px;
+  }
+
+  header {
+    display: grid;
+    grid-template-columns: repeat(24, 1fr);
+    gap: 20px;
+    @media screen and (max-width: 640px) {
+      display: flex;
+    }
+
+    .logoTitle {
+      display: flex;
+      align-items: center;
+      @media screen and (max-width: 640px) {
+        display: none;
+      }
+    }
+    .showLogo {
+      @media screen and (max-width: 640px) {
+        display: flex !important;
+      }
+    }
+    .title {
+      align-self: center;
+      grid-column: 2 / 19;
+    }
+  }
+
+  main {
+    margin-top: 40px;
+    flex: 1 1 auto;
+    @media screen and (max-width: 1024px) {
+      margin-top: 10px;
+    }
+  }
+
+  nav {
+    display: flex;
+    justify-content: space-between;
+
+    .navbar {
+      list-style: none;
+      display: inline-block;
+      white-space: nowrap;
+      padding-right: 5rem;
+
+      @media #{$breakpoint-md-only-max} {
+        display: none;
+      }
+
+      li {
+        min-width: 110px;
+        width: auto;
+        display: inline-block;
+        padding: 35px 27px 24px 27px;
+        border-radius: 0 0 20px 20px;
+        text-align: center;
+        vertical-align: middle;
+        text-transform: uppercase;
+
+        &:not(.active) {
+          cursor: pointer;
+        }
+
+        &:not(.active):hover {
+          background-color: $gray-1;
+          opacity: 0.5;
+        }
+
+        svg {
+          display: none;
+        }
+
+        @media #{$breakpoint-md-only-max} {
+          svg {
+            display: initial;
+          }
+          span {
+            display: none;
+          }
+        }
+
+        &.active {
+          background-color: $gray-1;
+        }
+      }
+    }
+
+    .menuIcon {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 15px;
+      padding: 30px 20px;
+      height: 70px;
+
+      @media #{$breakpoint-lg-up} {
+        display: none;
+      }
+    }
+  }
+
+  .scrollToTopButton {
+    position: fixed;
+    right: 1rem;
+    bottom: 1.5rem;
+    transform: translateY(5rem);
+    transition: transform $animation-duration;
+    z-index: 100;
+
+    @media screen and (max-width: 1024px) {
+      right: calc(2rem + 480px);
+    }
+
+    @media screen and (max-width: 620px) {
+      right: auto;
+      left: 1rem;
+    }
+
+    &.show {
+      transform: translateY(0);
+      transition: transform $animation-duration;
+    }
+
+    button {
+      display: flex;
+      align-items: center;
+      background-color: $primary;
+      border-radius: 50%;
+      width: 3.4rem;
+      height: 3.4rem;
+      border: none;
+      opacity: 0.8;
+
+      > * {
+        margin: auto;
+      }
+    }
+  }
+}
+
+.mobileWithoutPaddingContainer {
+  @media screen and (max-width: 764px) {
+    padding: 0;
+    & > header {
+      padding: 10px 10px 0 10px;
+    }
+  }
+}

@@ -1,0 +1,64 @@
+.wrapper {
+  display: flex;
+  align-items: center;
+
+  .inputWrapper {
+    width: 100%;
+    margin: 0 8px 0 8px;
+  }
+}
+
+.inputWrapper {
+  width: 100%;
+
+  > div {
+    input {
+      border: 1px solid #ccc !important;
+    }
+  }
+}
+.checkItemWrapper {
+  display: flex;
+  align-items: center;
+
+  .content {
+    display: flex;
+    flex-grow: 1;
+  }
+  p {
+    margin-block-end: 0;
+    color: black;
+    flex-grow: 1;
+    cursor: pointer;
+    min-height: 32;
+  }
+  .checkItemEditing {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    .inputWrapper {
+      width: 100%;
+    }
+  }
+}
+
+
+.checklistWrapper {
+  align-items: center;
+  display: flex;
+  margin-top: 8px;
+  .progressBar {
+      flex-grow: 1;
+      margin-left: 16px;
+  }
+
+  p {
+    font-size: 15px; 
+    margin-left: 5px;
+    font-weight: 500;
+    color: black;
+  }
+  span {
+    color: black;
+  }
+}

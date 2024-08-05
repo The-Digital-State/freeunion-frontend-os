@@ -1,0 +1,49 @@
+@import 'src/styles/variables/grid';
+@import 'src/styles/variables/common';
+
+.welcomeActions__wrapper {
+  background: linear-gradient(138.63deg, rgba(130, 142, 204, 0.15) 26.98%, rgba(198, 196, 241, 0.15) 100%);
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 47px;
+  margin-top: 20px;
+
+  @media #{$breakpoint-sm-only-max} {
+    padding: 20px;
+  }
+  @media screen and (max-width: 764px) {
+    padding: 10px;
+    border-radius: 0;
+  }
+
+  h3 {
+    width: 55%;
+    @media #{$breakpoint-lg-only-max} {
+      width: 90%;
+      text-align: center;
+      margin-bottom: 10px;
+    }
+    @media #{$breakpoint-sm-only-max} {
+      width: 100%;
+    }
+    @media screen and (max-width: 764px) {
+      font-size: 18px;
+    }
+  }
+
+  @media #{$breakpoint-lg-only-max} {
+    flex-direction: column;
+  }
+
+  .welcomeCircles {
+    display: flex;
+    width: 40%;
+    justify-content: space-around;
+    align-items: center;
+    @media #{$breakpoint-lg-only-max} {
+      width: 100%;
+    }
+  }
+}

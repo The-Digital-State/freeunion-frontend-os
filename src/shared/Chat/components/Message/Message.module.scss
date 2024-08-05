@@ -1,0 +1,68 @@
+.wrapper {
+  display: flex;
+  width: 100%;
+  margin-bottom: 8px;
+  height: fit-content;
+  cursor: pointer;
+  line-height: 30px;
+  padding-right: 16px;
+
+  time {
+    color: #828ECC;
+    margin-top: 8px;
+    font-weight: 500;
+    font-size: 10px;
+    line-height: 20px;
+  }
+  .avatar {
+    margin-right: 8px;
+    min-width: 42px;
+  }
+
+  .messageContent {
+    max-width: 500px;
+    padding: 8px;
+    word-break: break-word;
+    padding-left: 16px;
+    padding-right: 16px;
+    border-radius: 12px;
+    background: linear-gradient(138.63deg, #828ecc 26.98%, #c6c4f1 100%);
+    color: white;
+    a {
+      color: blue;
+    }
+    .repliedContent {
+      background-color: #f5f6fa;
+      color: #000000;
+      padding: 8px;
+      border-radius: 12px;
+      width: fit-content;
+    }
+  }
+  .messageContentContact {
+    background: linear-gradient(138.63deg, rgba(130, 142, 204, 0.15) 26.98%, rgba(198, 196, 241, 0.15) 100%);
+    color: #000000;
+  }
+  .messageInfo {
+    display: flex;
+    flex-direction: column;
+    margin: 0 8px;
+    
+    .seen {
+      font-weight: 500;
+      font-size: 10px;
+      line-height: 20px;
+      color: #828ECC;
+    }
+  }
+}
+
+.mineMessage {
+  justify-content: flex-end;
+  
+}
+.hide {
+  visibility: hidden;
+}
+
+

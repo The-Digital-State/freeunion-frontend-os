@@ -1,0 +1,139 @@
+@import '../../styles/variables/grid';
+@import '../../styles/variables/colors';
+@import '../../styles/variables/common';
+
+.Footer {
+  width: 100%;
+  font-size: 1rem;
+  padding: 20px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  @media screen and (max-width: 1280px) {
+    flex-wrap: wrap;
+  }
+
+  @media screen and (max-width: 1024px) {
+    font-size: 1rem;
+    flex-direction: row-reverse;
+    align-items: flex-start;
+  }
+
+  @media screen and (max-width: 640px) {
+    font-size: 1.2rem;
+    justify-content: flex-end;
+    position: relative;
+  }
+
+  .actionsContainer {
+    display: flex;
+    align-items: center;
+  }
+
+  .footerLogo {
+    margin: 0;
+    text-align: center;
+
+    @media screen and (max-width: 1024px) {
+      margin: 0;
+
+      svg {
+        width: 14rem;
+      }
+    }
+
+    @media screen and (max-width: 640px) {
+      position: absolute;
+      right: 0;
+    }
+
+    @media screen and (max-width: 450px) {
+      display: none;
+    }
+  }
+
+  .footerLinks {
+    margin-left: 15px;
+    display: flex;
+    align-items: center;
+
+    @media screen and (max-width: 1280px) {
+      margin-left: 0;
+      align-items: flex-start;
+      flex-direction: column;
+    }
+
+    a,
+    div,
+    p {
+      margin-bottom: 14px;
+      display: flex;
+      line-height: 2;
+      color: $black;
+      padding: 0;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+
+      @media #{$breakpoint-xl-up} {
+        margin: 0 0 0 10px;
+        text-transform: none;
+
+        &:first-child {
+          margin-left: 0;
+        }
+      }
+    }
+
+    a {
+      cursor: pointer;
+    }
+  }
+
+  .logoMobile {
+    margin-left: 10px;
+  }
+
+  .about {
+    display: flex;
+    gap: 0.8rem;
+    align-items: baseline;
+
+    a,
+    p {
+      margin: 0;
+      align-self: auto;
+    }
+
+    @media screen and (max-width: 1024px) {
+      svg {
+        width: 1rem;
+      }
+    }
+
+    @media screen and (max-width: 640px) {
+      svg {
+        width: 1.2rem;
+      }
+    }
+  }
+
+  .footerLogoSmall {
+    display: none;
+    text-align: center;
+    align-self: baseline;
+    margin: 0;
+
+    svg {
+      width: 4.5rem;
+      height: auto;
+    }
+
+    @media screen and (max-width: 450px) {
+      display: flex;
+      position: absolute;
+      right: 0;
+    }
+  }
+}

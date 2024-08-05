@@ -1,0 +1,21 @@
+.CommentCardModal {
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+
+  .description {
+    font-size: 15px;
+    line-height: 30px;
+    max-width: 390px;
+  }
+  .action {
+    display: flex;
+    justify-content: flex-end;
+
+    .actionButton {
+      background: linear-gradient(138.63deg, #828ecc 26.98%, #c6c4f1 100%);
+      max-width: 230px;
+      border: none;
+    }
+  }
+}

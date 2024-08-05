@@ -1,0 +1,107 @@
+@import '../../../styles/variables/colors';
+@import '../../../styles/variables/common';
+@import '../../../styles/variables/grid';
+
+.wrapper {
+  position: fixed;
+  max-height: 600px;
+  width: 350px;
+  overflow-y: auto;
+  z-index: 100;
+  left: $sidebar-size-desktop;
+  top: 10px;
+  @media #{$breakpoint-xs-only} {
+    right: 0;
+    width: 80%;
+    left: auto;
+  }
+
+  > p {
+    margin-top: 20px;
+    margin-left: 20px;
+  }
+
+  .btn_close {
+    position: absolute;
+    right: 15px;
+    top: 15px;
+    height: auto;
+    display: flex;
+    padding: 0;
+    width: fit-content;
+  }
+
+  ul li button {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: unset;
+    column-gap: 15px;
+    border: unset;
+    width: 100%;
+    padding: 20px;
+    transition: all 0.3s ease;
+
+    &:hover {
+      background-color: $gray-2;
+    }
+
+    div {
+      text-align: left;
+
+      h5 {
+        margin: 0;
+        line-height: 20px;
+
+        font-weight: 400;
+      }
+
+      p {
+        color: $gray-3;
+        margin: 0;
+        line-height: 20px;
+      }
+
+      span {
+        line-height: 20px;
+        color: $primary;
+        opacity: 0.9;
+        font-size: 13px;
+      }
+    }
+  }
+
+  img {
+    border-radius: 50%;
+    height: 55px;
+    width: 55px;
+  }
+
+  background-color: $gray-1;
+  box-shadow: 0 0 5px $gray-3;
+  border-radius: 10px;
+
+  &::-webkit-scrollbar {
+    width: 5px;
+    background-color: transparent;
+  }
+
+  &::-webkit-scrollbar-track {
+    margin: 8px;
+    background-color: $gray-1;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: black;
+    border: 1px solid black;
+  }
+  &::-webkit-scrollbar-track-piece {
+    background-color: $gray-2;
+  }
+}
+
+.withExpandedSidebar {
+  @media #{$breakpoint-md-up} {
+    left: $sidebar-size-expanded-desktop;
+  }
+}

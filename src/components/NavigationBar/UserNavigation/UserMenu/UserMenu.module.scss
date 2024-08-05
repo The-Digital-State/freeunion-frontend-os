@@ -1,0 +1,61 @@
+.UserMenu {
+  display: grid;
+  position: relative;
+  grid-template-rows: 70px 1fr;
+
+  .Burger {
+    justify-self: center;
+    align-self: center;
+    &:hover {
+      cursor: pointer;
+    }
+  }
+  .MenuItems {
+    position: relative;
+    display: block;
+    padding-bottom: 20px;
+    align-self: end;
+    max-height: calc(calc(var(--vh, 1vh) * 100) - 140px);
+    overflow: auto;
+    .MenuItem {
+      height: 60px;
+      display: grid;
+      align-self: end;
+      grid-template-rows: 1fr 20px;
+      .Icon {
+        justify-self: center;
+        align-self: center;
+        grid-row: 1/2;
+      }
+      &:hover {
+        cursor: pointer;
+      }
+      &:hover svg path {
+        stroke: var(--primary-color);
+      }
+      &:hover svg rect {
+        stroke: var(--primary-color);
+      }
+      .Title {
+        grid-row: 2/3;
+
+        justify-self: center;
+        align-self: center;
+        font-size: 10px;
+        display: none;
+      }
+      &:hover > .Title {
+        display: initial;
+        color: var(--primary-color);
+      }
+    }
+    .ActiveLink {
+      & > .Icon * {
+        stroke: var(--primary-color);
+      }
+    }
+    .disable {
+      pointer-events: none;
+    }
+  }
+}

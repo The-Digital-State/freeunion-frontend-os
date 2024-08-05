@@ -1,0 +1,24 @@
+.fullDescription {
+  p {
+    margin: 0 !important;
+  }
+  & > ul {
+    all: initial !important;
+    & > li {
+      all: initial !important;
+    }
+  }
+}
+
+.shortDescription {
+  max-height: 120px;
+  overflow: hidden;
+  word-wrap: break-word;
+}
+.additional {
+  margin: 5px 0;
+  & > h4 {
+    color: gray;
+    font-weight: normal;
+  }
+}

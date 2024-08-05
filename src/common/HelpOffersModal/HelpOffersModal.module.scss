@@ -1,0 +1,17 @@
+.offers {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  margin: 30px 0;
+
+  @media (max-width: 720px) {
+    display: block;
+    .checkboxHelpOffers label {
+      height: auto;
+      span::after {
+        top: 55%;
+        transform: translate(0, -55%);
+      }
+    }
+  }
+}

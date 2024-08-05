@@ -1,0 +1,64 @@
+@import '../../../../styles/variables/grid';
+@import '../../../../styles/variables/common';
+@import '../../../../styles/variables/indention';
+
+.StepConfirmEmail {
+  height: 100%;
+  width: 100%;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+
+  .content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    .publicName {
+      color: var(--red);
+    }
+
+    @media #{$breakpoint-md-up} {
+      flex-direction: row;
+      align-items: center;
+    }
+
+    .icon {
+      display: flex;
+      justify-content: center;
+    }
+
+    @media #{$breakpoint-sm-up} {
+      margin: 0 auto;
+      width: 650px;
+    }
+
+    p {
+      margin-top: 2rem;
+    }
+  }
+
+  .actions {
+    width: 100%;
+    display: grid;
+    grid-gap: $space-mobile;
+    margin: 0 auto;
+
+    @media #{$breakpoint-md-only-max} {
+      & > div {
+        padding: 0;
+      }
+    }
+
+    @media #{$breakpoint-lg-up} {
+      grid-template-columns: 1fr 1fr;
+      max-width: 1320px;
+      grid-gap: $space-desktop;
+    }
+  }
+}
+
+.btnResend {
+  margin-top: 20px;
+}

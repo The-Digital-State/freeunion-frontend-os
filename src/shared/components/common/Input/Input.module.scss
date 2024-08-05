@@ -1,0 +1,152 @@
+@import '../../../styles/variables/grid';
+@import '../../../styles/variables/typography';
+@import '../../../styles/variables/colors';
+@import '../../../styles/variables/common';
+
+.formGroup {
+  position: relative;
+  margin-bottom: 0;
+
+  label.label {
+    left: 0;
+    right: 0;
+    padding: 0 0 0 30px;
+    display: flex;
+    position: relative !important;
+    min-height: 25px !important;
+    pointer-events: none;
+
+    @media #{$breakpoint-sm-only-max} {
+      min-height: 18px !important;
+      line-height: 18px;
+    }
+  }
+}
+
+.inputContainer {
+  position: relative;
+  background: $text-field-bg;
+  border-radius: $border-radius;
+
+  &.gray {
+    background: $text-field-bg;
+  }
+
+  &.white {
+    background: $white !important;
+  }
+
+  &.withPrefix {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    position: relative;
+
+    .prefix {
+      display: grid;
+      align-items: center;
+      height: 100%;
+      border-top-left-radius: $border-radius;
+      border-bottom-left-radius: $border-radius;
+      padding: 0 0.5rem 0 27px;
+
+      span {
+        opacity: 0.2;
+      }
+    }
+
+    .prefix ~ input {
+      border-top-left-radius: 0;
+      border-bottom-left-radius: 0;
+      padding-left: 0.25rem;
+    }
+  }
+
+  input[type='email'],
+  input[type='password'],
+  input[type='text'],
+  input[type='number'] {
+    position: relative;
+    padding: 15px 27px 15px;
+    width: 100%;
+    height: 60px;
+    font-style: normal;
+    font-weight: normal;
+    font-size: $text-fields-font-size-mobile;
+    line-height: $text-fields-line-height-mobile;
+    color: $black;
+    background: transparent;
+    border: 3px solid $text-field-bg;
+    border-radius: 15px;
+    box-sizing: border-box;
+
+    @media #{$breakpoint-md-up} {
+      font-size: $text-fields-font-size-desktop;
+      line-height: $text-fields-line-height-desktop;
+    }
+
+    &:disabled {
+      background-color: $gray-2 !important;
+      color: $gray-3;
+      border-color: $input-disabled-border-color;
+    }
+  }
+
+  input[type='password'] {
+    padding-right: 60px;
+  }
+
+  /* Chrome, Safari, Edge, Opera */
+  input::-webkit-outer-spin-button,
+  input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+
+  /* Firefox */
+  input[type='number'] {
+    -moz-appearance: textfield;
+  }
+
+  .showPwd {
+    position: absolute;
+    top: 18px;
+    right: 18px;
+    width: 32px;
+    height: 26px;
+    background: url('../../../icons/icon-eye-close.svg');
+    background-size: cover;
+    cursor: pointer;
+
+    .openPwd & {
+      top: 22px;
+      height: 21px;
+      background: url('../../../icons/icon-eye-open.svg');
+    }
+  }
+
+  .spinnerContainer {
+    position: absolute;
+    top: 20px;
+    right: 25px;
+    vertical-align: middle;
+  }
+}
+
+.description {
+  min-height: 1rem;
+  transition: min-height $animation-duration;
+}
+
+.selectOptions {
+  display: block !important;
+  z-index: 5;
+  top: 78px;
+
+  @media #{$breakpoint-md-up} {
+    top: 85px;
+  }
+}
+
+input::placeholder {
+  font-size: 14px;
+}

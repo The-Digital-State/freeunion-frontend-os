@@ -1,0 +1,20 @@
+.buttonsWrapper {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  .addNewEmailButton {
+    border: none;
+    background: transparent;
+    margin: 0;
+    color: #828ecc;
+    margin-right: 10px;
+    :disabled {
+      color: gray;
+    }
+  }
+  .addNewEmailButton:disabled,
+  .addNewEmailButton[disabled] {
+    color: gray;
+  }
+}

@@ -1,0 +1,12 @@
+.OrganisationDetails {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+
+  .avatar {
+    margin-bottom: auto;
+  }
+  .description {
+    min-height: 300px;
+  }
+}

@@ -1,0 +1,15 @@
+.wrapper {
+  display: flex;
+  align-items: center;
+
+  .inputWrapper {
+    width: 100%;
+    margin: 0 8px 0 8px;
+    input {
+      border: 1px solid #ccc  !important;
+    }
+  }
+  button {
+    margin-bottom: 2px;
+  }
+}

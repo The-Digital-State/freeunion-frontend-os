@@ -1,0 +1,61 @@
+@import '../../styles/variables/colors';
+
+.form-group__checkbox {
+  padding: 30px 0;
+  border-radius: 15px;
+  box-sizing: border-box;
+
+  label {
+    position: relative;
+    top: 0;
+    left: 0;
+    margin-bottom: 20px;
+    padding-left: 80px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    opacity: 1;
+    cursor: pointer;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    input {
+      display: none;
+
+      &:checked + span:after {
+        visibility: visible;
+      }
+    }
+
+    span {
+      cursor: pointer;
+
+      &:before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 60px;
+        height: 60px;
+        background: $white;
+        border: 3px solid $gray-2;
+        border-radius: 50%;
+        box-sizing: border-box;
+      }
+
+      &:after {
+        content: '';
+        position: absolute;
+        left: 19px;
+        top: 20px;
+        width: 22px;
+        height: 19px;
+        background: url('/public/icons/check.svg');
+        box-sizing: border-box;
+        visibility: hidden;
+      }
+    }
+  }
+}

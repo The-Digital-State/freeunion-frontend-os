@@ -1,0 +1,70 @@
+@import '../../styles/variables/common';
+@import '../../styles/variables/colors';
+
+.NavigationBar {
+  position: fixed;
+  height: calc(var(--vh, 1vh) * 100);
+  left: 0;
+  display: grid;
+  transition: width $animation-duration;
+  width: $sidebar-size-desktop;
+  z-index: 100;
+  background-color: $gray-1;
+  @media #{$breakpoint-sm-only-max} {
+    display: none;
+  }
+  .menu {
+    background-color: inherit;
+    border: 2px solid $white;
+    display: grid;
+    grid-template-rows: 80px 1fr;
+    z-index: 100;
+
+    .ToggleOrganization {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      list-style-type: none;
+      position: relative;
+      height: 80px;
+      align-self: center;
+      justify-self: center;
+      margin-top: 35px;
+      border: none;
+      background: none;
+      padding: 0;
+      &:hover {
+        cursor: pointer;
+      }
+      .ToggleOrganizationTitle {
+        display: none;
+      }
+      &:hover > .ToggleOrganizationTitle {
+        display: initial;
+        font-size: 10px;
+        text-align: center;
+        width: calc(#{$sidebar-size-desktop} - 10px);
+        text-transform: uppercase;
+        color: var(--primary-color);
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        cursor: pointer;
+      }
+    }
+    .CloseOrganization {
+      margin-top: 70px;
+    }
+  }
+  .hideToggleOrganization {
+    grid-template-rows: 1fr;
+  }
+  .expanded {
+    background: $sky-blue;
+    opacity: 1;
+  }
+}
+
+.drawer {
+  margin-left: $sidebar-size-desktop;
+}

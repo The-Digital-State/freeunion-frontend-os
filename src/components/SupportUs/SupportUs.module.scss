@@ -1,0 +1,143 @@
+@import '/src/styles/variables/colors';
+@import '/src/styles/variables/typography';
+@import 'src/styles/variables/grid';
+
+.supportUs {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  justify-content: center;
+  padding-bottom: 20px;
+  min-height: 80vh;
+
+  @media screen and (max-width: 760px) {
+    padding: 0;
+    margin-top: -15px;
+  }
+
+  .title {
+    width: 100vw;
+    margin-left: 50%;
+    transform: translateX(-50%);
+    background: var(--primary-bg-trans-15);
+
+    .titleWrapper {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    h2 {
+      padding-left: 0;
+      margin: 22px 0 22px;
+    }
+
+    @media screen and (max-width: 1024px) {
+      h2 {
+        padding-left: 20px;
+      }
+    }
+
+    @media screen and (max-width: 764px) {
+      margin-top: 1rem;
+
+      h2 {
+        padding-left: 10px;
+        margin: 18px 0 18px;
+      }
+    }
+
+    @media screen and (max-width: 700px) {
+      margin-bottom: 1rem;
+    }
+  }
+
+  .infoWrapper {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    max-width: 1200px;
+
+    .infoAbout {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      ul {
+        width: 60%;
+        padding-left: 3rem;
+      }
+
+      h3 {
+        font-size: 1rem;
+      }
+
+      @media screen and (max-width: 1024px) {
+        flex-direction: column-reverse;
+
+        ul {
+          width: 100%;
+          padding-left: 2rem;
+        }
+
+        h3 {
+          font-size: 0.9rem;
+        }
+      }
+
+      @media screen and (max-width: 768px) {
+        h3 {
+          font-size: 0.8rem;
+        }
+      }
+    }
+  }
+
+  .cryptoWrapper {
+    width: 33.4%;
+    padding: 10px;
+
+    @media screen and (max-width: 1721px) {
+      width: 50%;
+    }
+
+    @media screen and (max-width: 1431px) {
+      width: 100%;
+    }
+  }
+
+  .cryptoWrapper > div {
+    @media screen and (max-width: 500px) {
+      margin: 0;
+    }
+  }
+
+  .paymentsWrapper,
+  .costsWrapper {
+    width: 100%;
+  }
+
+  .costsWrapper {
+    margin-top: 30px;
+    margin-bottom: 20px;
+  }
+
+  .paymentsWrapper > div,
+  .costsWrapper > div {
+    background: none !important;
+    padding: 0 !important;
+  }
+
+  .helpUs_buttons {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+
+    button,
+    a {
+      max-width: inherit;
+      width: 47%;
+    }
+  }
+}

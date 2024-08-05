@@ -1,0 +1,138 @@
+@import './grid';
+
+// Common
+$font-size-mobile: 16px;
+$line-height-mobile: 30px;
+
+$font-size-desktop: 15px;
+$line-height-desktop: 30px;
+
+$font-size-2-mobile: 18px;
+$line-height-2-mobile: 30px;
+
+$font-size-2-desktop: 16px;
+$line-height-2-desktop: 30px;
+
+// Headers
+$h1-font-size-mobile: 32px;
+$h1-line-height-mobile: 40px;
+
+$h1-font-size-desktop: 60px;
+$h1-line-height-desktop: 65px;
+
+$h2-font-size-mobile: 25px;
+$h2-line-height-mobile: 35px;
+
+$h2-font-size-desktop: 35px;
+$h2-line-height-desktop: 50px;
+
+$h3-font-size-mobile: $font-size-2-desktop;
+$h3-line-height-mobile: $line-height-2-desktop;
+
+$h3-font-size-desktop: 25px;
+$h3-line-height-desktop: 35px;
+
+$h4-font-size-mobile: 25px;
+$h4-line-height-mobile: 35px;
+
+$h4-font-size-desktop: 25px;
+$h4-line-height-desktop: 35px;
+
+// Text Fields
+$text-fields-font-size-mobile: 18px;
+$text-fields-line-height-mobile: 18px;
+$text-fields-label-font-size-mobile: 14px;
+$text-fields-label-line-height-mobile: 20px;
+$text-fields-help-font-size-mobile: 16px;
+$text-fields-help-line-height-mobile: 25px;
+$text-bar-font-size-mobile: 16px;
+$text-bar-line-height-mobile: 19px;
+
+$text-fields-font-size-desktop: 15px;
+$text-fields-line-height-desktop: 30px;
+$text-fields-label-font-size-desktop: 14px;
+$text-fields-label-line-height-desktop: 25px;
+$text-fields-help-font-size-desktop: 16px;
+$text-fields-help-line-height-desktop: 25px;
+$text-bar-font-size-desktop: 16px;
+$text-bar-line-height-desktop: 19px;
+
+// List
+$list-size-mobile: $font-size-mobile;
+$list-line-height-mobile: $line-height-mobile;
+$list-large-size-mobile: $h3-font-size-mobile;
+$list-large-line-height-mobile: $h3-line-height-mobile;
+
+$list-size-desktop: $font-size-desktop;
+$list-line-height-desktop: $line-height-desktop;
+$list-large-size-desktop: $h4-font-size-desktop;
+$list-large-line-height-desktop: $h4-line-height-desktop;
+
+// Buttons
+$button-font-size: 15px;
+$button-line-height: 22px;
+
+$button-font-size-mobile: 15px;
+$button-line-height-mobile: 25px;
+
+$button-font-size-desktop: 15px;
+$button-line-height-desktop: 25px;
+
+// landing
+/* btn */
+$l_btn_1920-family: 'Jost Regular', sans-serif;
+$l_btn_1920-style: normal;
+$l_btn_1920-weight: 500;
+$l_btn_1920-size: 20px;
+$l_btn_1920-height: 25px;
+
+$l_btn_320-height: 35px;
+
+/* H1 */
+$l_h1_1920-family: 'Jost Regular', sans-serif;
+$l_h1_1920-style: normal;
+$l_h1_1920-weight: 500;
+$l_h1_1920-size: 100px;
+$l_h1_1920-height: 100px;
+
+$l_h1_1020-size: 55px;
+
+$l_h1_320-family: 'Jost Regular', sans-serif;
+$l_h1_320-style: normal;
+$l_h1_320-weight: 500;
+$l_h1_320-size: 33px;
+$l_h1_320-height: 40px;
+
+/* H2 */
+$l_h2_1920-family: 'Jost Medium', sans-serif;
+$l_h2_1920-style: normal;
+$l_h2_1920-weight: 500;
+$l_h2_1920-size: 50px;
+$l_h2_1920-height: 58px;
+
+$l_h2_320-family: 'Jost Medium', sans-serif;
+$l_h2_320-style: normal;
+$l_h2_320-weight: 500;
+$l_h2_320-size: 33px;
+$l_h2_320-height: 41px;
+
+/* H3 */
+$l_h3_1920-family: 'Jost Regular', sans-serif;
+$l_h3_1920-style: normal;
+$l_h3_1920-weight: normal;
+$l_h3_1920-size: 25px;
+$l_h3_1920-height: 35px;
+
+/* body */
+$l_body_1920-family: 'Jost Regular', sans-serif;
+$l_body_1920-style: normal;
+$l_body_1920-weight: normal;
+$l_body_1920-size: 18px;
+$l_body_1920-height: 30px;
+
+/* italic */
+$l_italic_1920-family: 'Jost Medium Italic', sans-serif;
+$l_italic_1920-style: italic;
+$l_italic_1920-weight: 500;
+$l_italic_1920-size: 25px;
+$l_italic_1920-height: 35px;

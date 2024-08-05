@@ -1,0 +1,94 @@
+@import '../../styles/variables/grid';
+@import '../../styles/variables/typography';
+@import '../../styles/variables/colors';
+
+.select {
+  position: relative;
+  padding: 24px 50px 18px 30px;
+  width: 100%;
+  font-size: $text-fields-font-size-mobile;
+  line-height: $text-fields-line-height-mobile;
+  color: $black;
+  background: $text-field-bg;
+  border-radius: 15px;
+  box-sizing: border-box;
+  cursor: pointer;
+
+  @media #{$breakpoint-md-up} {
+    font-size: $text-fields-font-size-desktop;
+    line-height: $text-fields-line-height-desktop;
+  }
+
+  &:after {
+    content: '';
+    position: absolute;
+    top: 24px;
+    right: 20px;
+    width: 21px;
+    height: 12px;
+    background: url('/shared/public/icon-dropdown.svg');
+  }
+
+  &__options {
+    position: relative;
+    top: -20px;
+    padding: 15px 30px 15px;
+    display: none;
+    width: 100%;
+    background: $text-field-bg;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    box-sizing: border-box;
+    overflow: hidden;
+    cursor: pointer;
+  }
+
+  &__scroll {
+    padding-right: 50px;
+    width: 100%;
+    height: 100%;
+    overflow-y: scroll;
+  }
+
+  &__option {
+    margin-bottom: 10px;
+    width: 100%;
+    opacity: 0.6;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    &.selected,
+    &:hover {
+      opacity: 1;
+    }
+  }
+
+  &__scroller {
+    position: absolute;
+    top: 15px;
+    bottom: 15px;
+    right: 29px;
+    width: 3px;
+    background: $white;
+  }
+
+  &__scroll-slider {
+    position: absolute;
+    width: 3px;
+    background: $black;
+  }
+}
+
+.form-group__select.opened {
+  .select {
+    &:after {
+      transform: scaleY(-1);
+    }
+
+    &__options {
+      display: block;
+    }
+  }
+}

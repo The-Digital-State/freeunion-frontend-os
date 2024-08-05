@@ -1,0 +1,19 @@
+.wrapper {
+  & > p {
+    margin: 0;
+    margin-top: 20px;
+    margin-bottom: -10px;
+  }
+  & > div {
+    margin-top: 0 !important;
+    padding-top: 10px !important;
+    & > div {
+      background-color: transparent !important;
+      padding: 0 0 0 5px !important;
+      border: none !important;
+      & > label {
+        margin-bottom: 10px !important;
+      }
+    }
+  }
+}

@@ -1,0 +1,125 @@
+@import "../../styles/variables/common";
+@import "../../styles/variables/grid";
+@import "../../styles/variables/colors";
+@import "../../styles/variables/indention";
+
+.wrapper {
+  padding: $space-mobile;
+  background: $gradient-1;
+  border-radius: 15px;
+  display: grid;
+  grid-row-gap: $grid-gap;
+  width: 100%;
+  max-width: 100%;
+  word-break: break-word;
+  min-width: 300px;
+
+  @media #{$breakpoint-md-up} {
+    padding: 30px 35px 40px;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(14, 1fr);
+    max-height: 556px;
+    overflow-y: auto;
+    max-width: 800px;
+  }
+
+  .avatar {
+    > div {
+      width: 100% !important;
+    }
+
+    @media #{$breakpoint-md-up} {
+      grid-row: 1/ 12;
+      grid-column: 1/5;
+      border-radius: 15px;
+    }
+  }
+
+  .title,
+  span,
+  p {
+    @media #{$breakpoint-md-up} {
+      grid-column: 6 / end;
+    }
+  }
+
+  p {
+    overflow-y: scroll;
+  }
+
+  .title {
+    font-size: 25px;
+    line-height: 35px;
+    margin: 0;
+    color: unset;
+    justify-self: flex-start;
+
+    border-bottom: 3px solid var(--primary-color);
+
+    @media #{$breakpoint-md-up} {
+      grid-row: 1 / 2;
+    }
+  }
+
+  span {
+    font-size: 18px;
+    line-height: 30px;
+
+    &:global(.text-bold) {
+      margin-right: 1rem;
+    }
+  }
+
+  .reject__focus {
+    @media #{$breakpoint-md-up} {
+      grid-row: 3 / 4;
+    }
+  }
+
+  .reject__members {
+    @media #{$breakpoint-md-up} {
+      grid-row: 5 / 6;
+    }
+
+    .membersCount {
+      border-radius: 8px;
+      background-color: $primary;
+      padding: 0.5rem;
+      color: $white;
+    }
+  }
+
+  .text {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 30px;
+    margin: 0;
+
+    @media #{$breakpoint-md-up} {
+      grid-row: 7/14;
+    }
+  }
+
+  .tags {
+    @media #{$breakpoint-md-up} {
+      grid-column: 1 / 6;
+      grid-row: 14/14;
+    }
+  }
+
+  .button {
+    height: 60px;
+    display: flex;
+    margin-top: auto;
+    background: $l-2_gradient;
+    border: none;
+    color: #fff;
+
+    @media #{$breakpoint-md-up} {
+      align-items: center;
+      justify-content: center;
+      grid-column: 9 / end;
+      grid-row: 14/14;
+    }
+  }
+}

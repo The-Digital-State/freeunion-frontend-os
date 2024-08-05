@@ -1,0 +1,35 @@
+@import '../../../styles/variables/grid';
+@import '../../../styles/variables/typography';
+@import '../../../styles/variables/colors';
+
+textarea {
+  position: relative;
+  padding: 20px 27px 15px;
+  width: 100%;
+  font-style: normal;
+  font-weight: normal;
+  font-size: $text-fields-font-size-mobile;
+  line-height: $text-fields-line-height-mobile;
+  color: $black;
+  background: $text-field-bg;
+  border: 3px solid $text-field-bg;
+  border-radius: 15px;
+  box-sizing: border-box;
+  outline: none;
+  resize: none;
+
+  @media #{$breakpoint-md-up} {
+    font-size: $text-fields-font-size-desktop;
+    line-height: $text-fields-line-height-desktop;
+  }
+
+  &.white {
+    background-color: $white;
+  }
+
+  &::placeholder {
+    @media #{$breakpoint-md-up} {
+      line-height: $line-height-desktop;
+    }
+  }
+}

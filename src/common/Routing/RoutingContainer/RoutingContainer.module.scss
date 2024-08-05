@@ -1,0 +1,30 @@
+@import 'src/styles/variables/common';
+@import 'src/styles/variables/grid';
+
+.RoutingContainer {
+  max-width: 1920px;
+  min-height: calc(var(--vh, 1vh) * 100);
+  min-height: calc(var(--vh, 1vh) * 100);
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  transition: padding-right $animation-duration;
+  &.withSidebar {
+    @media #{$breakpoint-md-up} {
+      padding-left: $sidebar-size-desktop;
+    }
+  }
+  @media #{$breakpoint-sm-only-max} {
+    max-width: 100vw;
+  }
+  .wrapperFooter {
+    margin-top: auto;
+    padding: 10px 40px;
+    @media screen and (max-width: 1024px) {
+      padding: 10px 20px;
+    }
+    @media screen and (max-width: 600px) {
+      padding: 0 10px;
+    }
+  }
+}

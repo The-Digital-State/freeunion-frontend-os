@@ -1,0 +1,61 @@
+@import '../../../styles/variables/colors';
+
+.header {
+  display: flex;
+  margin-bottom: 8px;
+  cursor: pointer;
+  position: relative;
+  .avatar {
+    all: inherit;
+    position: relative;
+    justify-self: end;
+    align-self: center;
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+    margin: 8px;
+
+    & > div {
+      height: 42px !important;
+      width: 42px !important;
+    }
+  }
+  .info {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    .message {
+      margin: 0;
+      font-size: 15px;
+      line-height: 30px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      color: rgba(0, 0, 0, 0.4);
+      width: 100%;
+      max-width: 160px;
+      padding-right: 8px;
+    }
+
+    .title {
+      margin-bottom: 0;
+      width: 100%;
+      font-size: 15px;
+      padding-right: 8px;
+      max-width: 200px;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      overflow: hidden;
+    }
+  }
+  .messageCount {
+    background: $gradient-4;
+    border-radius: 20px;
+    color: #fff;
+    padding: 0 11px;
+    max-height: 40px;
+    top: 15px;
+    position: absolute;
+    right: 8px;
+  }
+}

@@ -1,0 +1,121 @@
+@import '../../styles/variables/grid';
+@import '../../styles/variables/common';
+
+.Auth {
+  display: grid;
+
+  @media #{$breakpoint-md-only-max} {
+    grid-template-areas: 'logo header' 'left left' 'right right' 'footer footer';
+    grid-template-columns: 1fr 2fr;
+    grid-column-gap: calc(#{$grid-gap} / 2);
+    grid-template-rows: repeat(4, auto);
+  }
+
+  @media #{$breakpoint-md-up} {
+    min-height: calc(var(--vh, 1vh) * 100);
+  }
+
+  @media #{$breakpoint-lg-up} {
+    grid-template-columns: 180px 1fr 1fr 180px;
+    grid-template-rows: auto 400px auto;
+    justify-content: space-between;
+  }
+
+  .logo {
+    grid-area: logo;
+
+    @media #{$breakpoint-md-only-max} {
+      display: grid;
+      justify-content: end;
+
+      svg {
+        width: #{'min(150px, 30vw)'};
+      }
+    }
+
+    @media #{$breakpoint-lg-up} {
+      grid-row: 1 / span 1;
+      grid-column: 1 / span 1;
+    }
+  }
+
+  .header {
+    grid-area: header;
+
+    @media #{$breakpoint-sm-only-max} {
+      svg {
+        width: 52vw;
+      }
+    }
+
+    @media #{$breakpoint-lg-up} {
+      grid-row: 1 / span 1;
+      grid-column: 2 / span 3;
+    }
+  }
+
+  .nav {
+    grid-area: nav;
+    justify-self: flex-end;
+
+    ul {
+      text-transform: uppercase;
+
+      li {
+        margin-left: 3rem;
+        display: inline-block;
+      }
+    }
+  }
+
+  .mainLeft {
+    grid-area: left;
+
+    @media #{$breakpoint-lg-up} {
+      grid-row: 2 / span 1;
+      grid-column: 1 / span 2;
+
+      .leftContent {
+        width: 100%;
+        max-width: 370px;
+
+        p {
+          max-width: 280px;
+        }
+      }
+    }
+
+    @media #{$breakpoint-xl-up} {
+      grid-column: 2 / span 1;
+    }
+
+    h3 {
+      font-size: 25px;
+      line-height: 35px;
+    }
+  }
+
+  .mainRight {
+    grid-area: right;
+
+    @media #{$breakpoint-lg-up} {
+      grid-row: 2 / span 1;
+      grid-column: 3 / span 1;
+
+      .rightContent {
+        width: 100%;
+        max-width: 520px;
+      }
+    }
+  }
+
+  .footer {
+    grid-area: footer;
+    align-self: end;
+
+    @media #{$breakpoint-lg-up} {
+      grid-row: 3 / span 1;
+      grid-column: 1 / span 4;
+    }
+  }
+}

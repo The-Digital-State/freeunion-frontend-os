@@ -1,0 +1,7 @@
+.wrapper {
+  min-height: 300px;
+  @media screen and (max-width: 764px) {
+    margin: 0 10px;
+    width: auto !important;
+  }
+}

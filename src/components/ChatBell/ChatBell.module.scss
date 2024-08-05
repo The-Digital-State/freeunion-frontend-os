@@ -1,0 +1,33 @@
+.link {
+  background-color: unset;
+  border: unset;
+  padding: 0;
+  position: relative;
+  width: fit-content;
+  margin: 0 auto;
+  height: 100%;
+  @media screen and (max-width: 768px) {
+    height: auto;
+  }
+  .count {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin-top: -5px;
+    background-color: crimson;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+    font-size: 12px;
+  }
+}
+
+.activeLink {
+  & > .Icon * {
+    stroke: var(--primary-color);
+  }
+}

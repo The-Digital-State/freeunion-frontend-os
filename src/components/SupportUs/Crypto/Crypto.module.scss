@@ -1,0 +1,17 @@
+.wrapper {
+  img {
+    max-height: 200px;
+    margin: auto;
+  }
+
+  .coinItem {
+    padding-bottom: 30px;
+    .address {
+      word-wrap: break-word;
+    }
+
+    &:not(:last-child) {
+      border-bottom: 2px solid black;
+    }
+  }
+}

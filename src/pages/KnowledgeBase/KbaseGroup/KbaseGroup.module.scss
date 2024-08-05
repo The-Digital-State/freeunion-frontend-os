@@ -1,0 +1,26 @@
+.wrapper {
+  .wrapperGrid {
+    width: 100%;
+    display: grid;
+    grid-gap: 25px;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    @media screen and (max-width: 1280px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @media screen and (max-width: 800px) {
+      grid-template-columns: repeat(1, 1fr);
+      padding: 0px;
+    }
+    .materialCard {
+      width: 100%;
+    }
+  }
+
+  .list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+}

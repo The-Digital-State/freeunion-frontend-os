@@ -1,0 +1,47 @@
+.creater {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+  @media screen and (max-width: 700px) {
+    width: 100%;
+    flex-direction: column;
+  }
+  .createrDataWrapper {
+    @media screen and (max-width: 700px) {
+      width: 100%;
+    }
+  }
+  .createrData {
+    display: flex;
+    align-items: center;
+    .infoWrapper {
+      display: flex;
+      flex-direction: column;
+      margin-left: 20px;
+    }
+  }
+  data {
+    margin-bottom: 13px;
+  }
+  .buttonWrapper {
+    display: flex;
+
+    width: auto;
+    @media screen and (max-width: 700px) {
+      align-self: flex-start;
+    }
+
+    .walletButton {
+      max-width: min-content;
+      padding: 15px;
+      margin-right: 20px;
+    }
+    .linkButton {
+      > svg {
+        fill: none;
+      }
+    }
+  }
+}

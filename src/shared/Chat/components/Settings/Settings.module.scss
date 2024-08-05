@@ -1,0 +1,60 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: space-between;
+  .ChatSidebarContainer {
+    display: flex;
+    flex-direction: column;
+
+    .ChatSidebarHeader {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding-left: 20px;
+      padding-right: 16px;
+      padding-top: 16px;
+      margin-bottom: -24px;
+      background-color: linear-gradient(138.63deg, rgba(130, 142, 204, 0.15) 26.98%, rgba(198, 196, 241, 0.15) 100%);
+      
+      > h3 {
+        text-align: start;
+      }
+      .BackIcon {
+        cursor: pointer;
+        border: none;
+        background: transparent; 
+      }
+    }
+    
+    li {
+      display: flex;
+      align-items: center;
+
+      img {
+        min-width: 42px;
+      }
+      h5 {
+        margin-left: 8px;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+      }
+    }
+  }
+  > button {
+    max-width: 190px;
+    display: flex;
+    align-self: center;
+    z-index: 1;
+  }
+}
+
+.RadioWrapper {
+  background: initial !important;
+  border: none !important;
+}
+
+.saveButton {
+  margin-top: -24px;
+}

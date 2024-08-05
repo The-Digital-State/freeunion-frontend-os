@@ -1,0 +1,33 @@
+@import '../../../styles/variables/grid';
+
+.CreateUnionSuccessButtons {
+  display: flex;
+  width: 100%;
+  gap: 30px;
+  align-items: center;
+  justify-content: center;
+
+  @media #{$breakpoint-md-only-max} {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  button {
+    max-width: 644px;
+  }
+}
+
+.CreateUnionSuccessInfo {
+  display: flex;
+  gap: 50px;
+  align-items: center;
+  height: 100%;
+
+  @media #{$breakpoint-sm-only-max} {
+    flex-direction: column;
+  }
+
+  .CreateUnionSuccessText {
+    max-width: 380px;
+  }
+}

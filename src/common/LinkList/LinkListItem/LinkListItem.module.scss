@@ -1,0 +1,28 @@
+@import '../../../styles/variables/common';
+@import '../../../styles/variables/colors';
+@import '../../../styles/variables/grid';
+@import '../../../styles/variables/indention';
+@import '../../../styles/variables/typography';
+
+.item {
+  list-style-type: none;
+  .link {
+    display: grid;
+    grid-template-columns: 50px auto;
+    .linkIcon {
+      justify-self: end;
+      align-self: center;
+    }
+    .linkTitle {
+      align-self: center;
+      margin-left: 20px;
+      color: $black;
+      line-height: 44px;
+      font-size: $font-size-desktop;
+      font-weight: 400;
+    }
+  }
+  .disable {
+    pointer-events: none;
+  }
+}

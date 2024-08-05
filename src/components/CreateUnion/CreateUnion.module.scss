@@ -1,0 +1,16 @@
+@import '../../styles/variables/grid';
+@import '../../styles/variables/colors';
+@import '../../styles/variables/common';
+@import '../../styles/variables/indention';
+
+.CreateUnionPage {
+  padding-top: 60px;
+  padding-bottom: 87px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.CreateUnionPageSuccess {
+  height: calc(var(--vh, 1vh) * 100);
+}

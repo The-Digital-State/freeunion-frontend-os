@@ -1,0 +1,138 @@
+@import '../../styles/variables/grid';
+@import '../../styles/variables/common';
+@import '../../styles/variables/colors';
+
+body {
+  @media screen and (max-width: 764px) {
+    margin-bottom: 0 !important;
+  }
+}
+
+.Alliance {
+  h2 {
+    font-weight: 500;
+
+    @media screen and (max-width: 764px) {
+      margin: 20px 0 10px 20px;
+      font-size: 28px;
+      line-height: 40px;
+    }
+  }
+
+  .mobilePadding {
+    @media screen and (max-width: 764px) {
+      padding: 0;
+    }
+  }
+
+  .educationWrapper {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background: var(--primary-bg-trans-15);
+    padding: 20px 20px;
+    & > h3 {
+      max-width: 1000px;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+    .containerWrapper {
+      max-width: 825px;
+      width: 100%;
+      .videoContainer {
+        width: 100%;
+        height: 0;
+        padding-bottom: 56.25%;
+        position: relative;
+        margin: 0;
+        .videoWrapper {
+          position: absolute;
+          top: 0;
+          right: 0;
+          bottom: 0;
+          left: 0;
+          .education {
+            width: 100%;
+            height: 100%;
+            border: none;
+            border-radius: 15px;
+          }
+        }
+      }
+    }
+  }
+
+  .wrapperBackButton {
+    width: 100%;
+  }
+  .card {
+    background: var(--primary-bg-trans-15);
+    border-radius: $border-radius;
+    padding: 16px 27px;
+
+    @media #{$breakpoint-sm-only-max} {
+      padding: 1rem;
+    }
+  }
+
+  .suggestNews {
+    @media screen and (max-width: 764px) {
+      display: flex;
+      justify-content: center;
+
+      a {
+        max-width: 500px;
+        width: 100%;
+        margin: 10px;
+      }
+    }
+  }
+
+  .leaveButton {
+    margin-top: 20px;
+
+    @media screen and (max-width: 764px) {
+      display: flex;
+      justify-content: center;
+
+      button {
+        max-width: 500px;
+        width: 100%;
+      }
+    }
+  }
+  .introButton {
+    display: block;
+  }
+  .wrapperSuggestionButton {
+    padding: 0 40px;
+    margin-top: 5px;
+    @media screen and (max-width: 1024px) {
+      padding: 0 20px;
+    }
+    @media screen and (max-width: 765px) {
+      padding: 0;
+    }
+  }
+  .suggestions {
+    // scroll-snap-type: y mandatory;
+
+    .tabsContainer {
+      margin-top: 20px;
+      position: relative;
+
+      @media #{$breakpoint-md-only-max} {
+        scroll-snap-align: start;
+        scroll-snap-stop: normal;
+
+        transition: height $animation-duration;
+      }
+
+      @media #{$breakpoint-md-up} {
+        // min-height: 665px;
+      }
+    }
+  }
+}

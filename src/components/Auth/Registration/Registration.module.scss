@@ -1,0 +1,36 @@
+@import '../../../styles/variables/grid';
+
+.Registration {
+  display: flex;
+  flex-direction: column;
+  min-height: calc(var(--vh, 1vh) * 100);
+  display: flex;
+
+  @media #{$breakpoint-sm-only-max} {
+    overflow-x: hidden;
+    max-width: 100vw;
+  }
+
+  @media #{$breakpoint-md-only-max} {
+    h1 {
+      text-align: center;
+    }
+  }
+
+  .container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+
+    h3 {
+      margin: 2rem 0 1rem;
+    }
+
+    @media #{$breakpoint-sm-up} {
+      .progressBar {
+        margin: 0 auto;
+        width: 650px;
+      }
+    }
+  }
+}

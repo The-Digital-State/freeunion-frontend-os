@@ -1,0 +1,22 @@
+.wrapper {
+  max-width: 400px;
+  h3 {
+    text-align: center;
+    margin-bottom: 20px;
+    @media screen and (max-width: 767px) {
+      margin-top: 10px;
+    }
+  }
+  .chats {
+    display: flex;
+    flex-wrap: wrap;
+    li {
+      list-style-type: none;
+      width: -webkit-fill-available;
+      button,
+      a {
+        margin-bottom: 15px;
+      }
+    }
+  }
+}

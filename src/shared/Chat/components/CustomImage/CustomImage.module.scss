@@ -1,0 +1,29 @@
+.CustomImage {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f5f6fa;
+  border-radius: 50%;
+  font-size: 1.5rem;
+  position: relative;
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+  }
+}
+
+.round {
+  border-radius: 50% !important;
+}
+
+.bgWhite {
+  background-color: white;
+  color: gray;
+}
+
+.bgGray {
+  background-color: #f5f6fa;
+  color: white;
+}

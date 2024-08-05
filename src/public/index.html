@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="%PUBLIC_URL%/images/logo/vio.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo.svg" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,400;0,500;1,500&display=swap" rel="stylesheet" />
+
+    <!-- title and metas in server.ts -->
+
+    <script>
+      window.SSR_DATA = {};
+    </script>
+
+    <!-- Google Tag Manager -->
+    <script>
+      (function (w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' });
+        var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s),
+          dl = l != 'dataLayer' ? '&l=' + l : '';
+        j.async = true;
+        j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+        f.parentNode.insertBefore(j, f);
+      })(window, document, 'script', 'dataLayer', '%REACT_APP_GTM_ID%');
+    </script>
+    <!-- End Google Tag Manager -->
+  </head>
+  <body>
+    <script>
+      window.OneSignal = window.OneSignal || [];
+    </script>
+    <div id="root"></div>
+
+    <!-- Google Tag Manager (noscript) -->
+    <noscript
+      ><iframe
+        src="https://www.googletagmanager.com/ns.html?id=%REACT_APP_GTM_ID%"
+        height="0"
+        width="0"
+        style="display: none; visibility: hidden"
+      ></iframe
+    ></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+  </body>
+
+  <script src="https://cdn.onesignal.com/sdks/OneSignalSDK.js" async=""></script>
+  <script>
+    OneSignal.push(function () {
+      OneSignal.init({
+        appId: '%REACT_APP_ONESIGNAL_APP_ID%',
+        safari_web_id: '%REACT_APP_ONESIGNAL_SAFARI_WEB_ID%',
+        allowLocalhostAsSecureOrigin: true,
+        promptOptions: {
+          slidedown: {
+            prompts: [
+              {
+                type: 'push', // current types are "push" & "category"
+                autoPrompt: false,
+                text: {
+                  /* limited to 90 characters */
+                  actionMessage: 'Мы бы хотели показывать вам уведомления от ваших организаций и платформы',
+                  /* acceptButton limited to 15 characters */
+                  acceptButton: 'Разрешить',
+                  /* cancelButton limited to 15 characters */
+                  cancelButton: 'Отмена',
+                },
+              },
+            ],
+          },
+        },
+      });
+      // OneSignal.log.setLevel('trace');
+    });
+  </script>
+</html>

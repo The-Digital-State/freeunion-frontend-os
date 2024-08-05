@@ -1,0 +1,145 @@
+@import 'src/styles/variables/common';
+@import 'src/styles/variables/colors';
+
+.Suggestion {
+  height: 100%;
+  display: grid;
+  grid-template-rows: minmax(1px, auto) 1fr;
+  grid-gap: $grid-gap;
+  background: var(--primary-bg-trans-30);
+
+  &.noMore {
+    grid-template-rows: 1fr;
+
+    &.withHeading {
+      grid-template-rows: minmax(1px, auto) 1fr;
+    }
+  }
+
+  .heading {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    align-items: center;
+
+    & > *:last-child {
+      justify-content: end;
+    }
+
+    .icon {
+      display: grid;
+      align-items: center;
+    }
+  }
+
+  .container {
+    display: grid;
+    grid-template-rows: 1fr auto;
+    .content {
+      overflow-y: auto;
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 20px;
+      .changeButton {
+        display: flex;
+        align-self: flex-start;
+        margin-top: 15px;
+        button {
+          margin-right: 10px;
+          color: var(--primary-color);
+          border: none;
+          padding: 0;
+          background: transparent;
+
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+      }
+      .wrapperMoreButton {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        .buttonMore {
+          background-color: transparent;
+        }
+      }
+      h4 {
+        display: inline;
+        margin-right: 5px;
+        color: gray;
+        font-weight: normal;
+      }
+
+      .doughnut {
+        display: flex;
+        justify-content: center;
+        padding-bottom: 20px;
+      }
+
+      .swipeIcon {
+        display: flex;
+        flex: 1;
+        justify-content: center;
+        align-items: center;
+
+        svg {
+          animation: swipeIconMoving 3s linear infinite;
+        }
+      }
+    }
+
+    .footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      .like,
+      .next {
+        height: 40px;
+        width: 80px;
+        background-color: $white;
+        border-radius: 27px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .like {
+        background-color: $red;
+
+        &.voted {
+          background-color: $white;
+          justify-content: space-around;
+        }
+
+        &.disabled {
+          opacity: 0.8;
+        }
+      }
+    }
+
+    &:not(.touched) {
+      transition: transform $animation-duration, rotate $animation-duration;
+    }
+
+    &.touched {
+      transition: none;
+    }
+  }
+}
+
+@keyframes swipeIconMoving {
+  0% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-1rem);
+  }
+  75% {
+    transform: translateX(1rem);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}

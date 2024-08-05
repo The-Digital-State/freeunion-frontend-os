@@ -1,0 +1,38 @@
+.wrapper {
+  max-height: 400px;
+  width: 100%;
+  overflow-y: auto;
+  margin-bottom: 8px;
+  min-width: 600px;
+
+  li {
+    display: flex;
+    margin-bottom: 16px;
+    align-items: center;
+    cursor: pointer;
+    > div {
+      display: flex;
+    }
+
+    img {
+      min-width: 60px;
+    }
+    h5 {
+      margin-left: 18px;
+    }
+    svg {
+      cursor: pointer;
+    }
+  }
+  
+}
+
+.button {
+  display: flex;
+  justify-content: flex-end;
+
+  > button {
+    max-width: 200px;
+    margin: 0 !important;
+  }
+}

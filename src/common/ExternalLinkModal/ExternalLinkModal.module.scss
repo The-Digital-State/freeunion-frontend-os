@@ -1,0 +1,12 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  max-width: 480px;
+  .text {
+    margin: 10px 0;
+  }
+  .link {
+    word-break: break-all;
+    margin: 10px 0;
+  }
+}

@@ -1,0 +1,101 @@
+@import '../../../styles/variables/colors';
+@import '../../../styles/variables/grid';
+@import '../../../styles/variables/indention';
+@import '../../../styles/variables/typography';
+
+.formGroup {
+  label {
+    left: 30px;
+
+    position: absolute;
+    top: 0;
+    font-size: $font-size-desktop;
+    line-height: $line-height-desktop;
+    color: $black;
+    opacity: 1;
+    cursor: default;
+  }
+
+  .formGroupRadio {
+    padding: 32px;
+    background-color: $text-field-bg;
+    border: 3px solid $text-field-bg;
+    border-radius: 15px;
+    box-sizing: border-box;
+
+    @media #{$breakpoint-lg-up} {
+      padding: $space-desktop;
+    }
+
+    label {
+      position: relative;
+      top: 0;
+      left: 0;
+      margin-bottom: 20px;
+      padding-left: 50px;
+      display: flex;
+      opacity: 1;
+      cursor: pointer;
+
+      display: flex;
+      flex-direction: column;
+
+      .optionElements {
+        margin-left: -35px;
+        max-height: 220px;
+        overflow: auto;
+        scrollbar-width: thin;
+
+        label {
+          padding-left: 20px;
+        }
+      }
+      
+      &:last-child {
+        margin-bottom: 0;
+      }
+
+      input {
+        display: none;
+
+        &:checked + span:after {
+          visibility: visible;
+        }
+      }
+
+      span {
+        cursor: pointer;
+
+        &:before {
+          content: '';
+          position: absolute;
+          left: 0;
+          top: 5px;
+          width: 20px;
+          height: 20px;
+          background: inherit;
+          border: 1.5px solid $gray-5;
+          border-radius: 50%;
+          box-sizing: border-box;
+        }
+
+        &:after {
+          content: '';
+          position: absolute;
+          left: 8px;
+          top: 13px;
+          width: 4px;
+          height: 4px;
+          background: $black;
+          border-radius: 50%;
+          box-sizing: border-box;
+          visibility: hidden;
+        }
+      }
+    }
+  }
+
+  &.error .form-group__radio {
+    border-color: $error;
+  }
+}

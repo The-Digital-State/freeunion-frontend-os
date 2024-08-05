@@ -1,0 +1,215 @@
+@import '../../../styles/variables/grid';
+@import '../../../styles/variables/common';
+@import '../../../styles/variables/colors';
+@import '../../../styles/variables/typography';
+
+.cardClass {
+  color: unset !important;
+  position: relative;
+
+  .toggleButton {
+    margin: 0;
+    padding: 0;
+    border: none;
+
+    background: transparent !important;
+    color: #828ecc;
+    font-weight: 500;
+
+    &:hover {
+      box-shadow: none;
+    }
+
+    & > svg {
+      width: 15px;
+      height: 15px;
+      margin-left: 10px;
+      & > path {
+        stroke: #828ecc;
+        stroke-width: 3px;
+      }
+    }
+  }
+}
+.withoutBanners {
+  border-radius: 15px !important;
+  @media screen and (max-width: 764px) {
+    border-radius: 0 !important;
+  }
+}
+
+.organisationInfo {
+  display: grid;
+  grid-gap: $grid-gap;
+  grid-auto-rows: auto;
+  background: var(--primary-bg-trans-15);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  gap: 10px;
+  border-radius: 0 0 15px 15px;
+  position: relative;
+
+  @media #{$breakpoint-xl-up} {
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+  }
+  @media screen and (max-width: 764px) {
+    border-radius: 0 !important;
+  }
+
+  .organisationBlockAvatar {
+    display: flex;
+    flex-direction: column;
+    padding: 40px;
+    @media screen and (max-width: 1280px) {
+      padding: 35px 35px 60px 35px;
+    }
+    @media screen and (max-width: 764px) {
+      padding: 20px;
+    }
+    @media screen and (max-width: 450px) {
+      padding: 15px;
+    }
+  }
+  .organisationDetailsWrapper {
+    padding: 40px;
+    @media screen and (max-width: 1280px) {
+      padding: 35px 35px 60px 35px;
+    }
+    @media screen and (max-width: 764px) {
+      padding: 20px;
+    }
+    @media screen and (max-width: 450px) {
+      padding: 15px;
+    }
+  }
+
+  .organisationInfoUsers {
+    white-space: nowrap;
+  }
+
+  .organisationUsersCount,
+  .organisationNewUsersCount {
+    padding: 4px 10px;
+    border-radius: 8px;
+    background: linear-gradient(138.63deg, #828ecc 26.98%, #c6c4f1 100%);
+    color: #fff;
+  }
+
+  .organisationNewUsersCount {
+    border-radius: 50%;
+  }
+
+  .sectionSocials {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-top: 10px;
+
+    h3 {
+      margin-bottom: 10px;
+    }
+  }
+
+  .avatarTitleBlock {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-bottom: 20px;
+    .organisationAvatar {
+      position: relative;
+      margin-right: 3rem;
+    }
+  }
+
+  .sectionTitleName {
+    position: relative;
+    display: inline;
+    font-size: 25px;
+    line-height: 35px;
+    text-transform: uppercase;
+    color: #000000;
+    opacity: 0.9;
+    text-align: left;
+    margin-bottom: 15px;
+    max-width: 450px;
+    text-decoration: none;
+
+    .verificationAllianceInfo {
+      display: inline;
+      position: relative;
+    }
+
+    @media #{$breakpoint-lg-up} {
+      text-align: start;
+    }
+
+    @media #{$breakpoint-xs-only} {
+      font-size: 18px;
+      .verificationAllianceInfo {
+        bottom: -10px;
+      }
+    }
+    @media #{$breakpoint-xl-up} {
+      margin-bottom: 0;
+    }
+    @media screen and (max-width: 764px) {
+      max-width: none;
+    }
+    @media screen and (max-width: 450px) {
+      margin-bottom: 0;
+    }
+  }
+
+  .sectionTitle {
+    text-transform: uppercase;
+    font-size: 20px;
+    font-weight: normal;
+    height: 30px;
+    margin: 0;
+  }
+  .sectionDataSocials {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    margin-top: -3px;
+    a:not(:last-child) {
+      margin-right: 15px;
+    }
+    a {
+      margin-bottom: 10px;
+    }
+  }
+  .button {
+    margin-top: auto;
+  }
+
+  .sectionData {
+    min-height: 30px;
+
+    @media #{$breakpoint-md-only-max} {
+      align-content: start;
+    }
+  }
+
+  .organisationDetails {
+    display: grid;
+    grid-gap: 15px 50px;
+    grid-template-rows: repeat(3, auto);
+    grid-template-columns: 1fr;
+    height: max-content;
+    span {
+      font-size: 18px;
+      line-height: 25px;
+    }
+    @media #{$breakpoint-md-up} {
+      grid-template-columns: auto 1fr;
+    }
+
+    @media #{$breakpoint-sm-only-max} {
+      grid-row-gap: 5px;
+    }
+  }
+}

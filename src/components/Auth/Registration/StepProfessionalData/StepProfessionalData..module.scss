@@ -1,0 +1,23 @@
+@import '../../../../styles/variables/grid';
+@import '../../../../styles/variables/common';
+
+.StepProfessionalData {
+  @media #{$breakpoint-sm-up} {
+    margin: 0 auto;
+    width: 650px;
+  }
+}
+
+.actions {
+  @media #{$breakpoint-lg-up} {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: calc(#{$grid-gap} * 2);
+  }
+
+  @media #{$breakpoint-md-only-max} {
+    button:last-child {
+      margin-top: 25px;
+    }
+  }
+}

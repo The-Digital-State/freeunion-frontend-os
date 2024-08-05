@@ -1,0 +1,100 @@
+@import '../../styles/variables/grid';
+@import '../../styles/variables/typography';
+@import '../../styles/variables/colors';
+
+html {
+  font-style: normal;
+  font-weight: normal;
+  font-size: $font-size-mobile;
+  line-height: $line-height-mobile;
+  color: $black;
+
+  @media #{$breakpoint-lg-up} {
+    font-size: $font-size-desktop;
+    line-height: $line-height-desktop;
+  }
+}
+
+ul {
+  font-size: $list-size-mobile;
+  line-height: $list-line-height-mobile;
+
+  @media #{$breakpoint-lg-up} {
+    font-size: $list-size-desktop;
+    line-height: $list-line-height-desktop;
+  }
+
+  &.large {
+    font-weight: 500;
+    font-size: $list-large-size-mobile;
+    line-height: $list-large-line-height-mobile;
+
+    @media #{$breakpoint-lg-up} {
+      font-size: $list-large-size-desktop;
+      line-height: $list-large-line-height-desktop;
+    }
+  }
+
+  li {
+    font-family: inherit;
+  }
+
+  &.no-style {
+    list-style: none;
+  }
+}
+
+.highlight {
+  color: $primary;
+}
+
+.text-neutral {
+  font-style: initial;
+  font-weight: initial;
+  text-transform: none;
+}
+
+.text-italic {
+  font-style: italic;
+}
+
+.text-bold {
+  font-weight: bold;
+}
+
+.text-uppercase {
+  text-transform: uppercase;
+}
+
+.text-nowrap {
+  white-space: nowrap;
+}
+
+a {
+  &,
+  &:link,
+  &:visited {
+    color: $primary;
+    text-decoration: none;
+  }
+
+  &:focus,
+  &:hover,
+  &:active {
+    opacity: 0.7;
+  }
+}
+
+.bar {
+  font-style: normal;
+  font-weight: bolder;
+  font-size: $text-bar-font-size-mobile;
+  line-height: $text-bar-line-height-mobile;
+  color: $black;
+  text-transform: uppercase;
+
+  @media #{$breakpoint-lg-up} {
+    font-size: $text-bar-font-size-desktop;
+    line-height: $text-bar-line-height-desktop;
+  }
+}

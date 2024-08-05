@@ -1,0 +1,6 @@
+.button {
+  max-width: fit-content;
+  @media screen and (max-width: 639px) {
+    max-width: inherit;
+  }
+}

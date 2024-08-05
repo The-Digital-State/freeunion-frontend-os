@@ -1,0 +1,46 @@
+@import 'src/styles/variables/grid';
+
+.helpOffers {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  background: var(--primary-bg-trans-15);
+  padding: 30px 50px;
+  border-radius: 0 0 30px 30px;
+  @media screen and (max-width: 764px) {
+    border-radius: 0;
+  }
+  @media screen and (max-width: 500px) {
+    padding: 10px 15px;
+  }
+
+  @media #{$breakpoint-xl-up} {
+    flex-direction: row;
+  }
+  .helpOffersInfo {
+    width: 100%;
+    margin-bottom: 10px;
+    @media screen and (max-width: 500px) {
+      padding: 0 15px;
+    }
+    @media #{$breakpoint-xl-up} {
+      width: 52%;
+    }
+  }
+  .wrapperButtonHelpOffers {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    max-width: 450px;
+    justify-content: space-between;
+    align-items: center;
+    @media screen and (max-width: 1279px) {
+      max-width: 60%;
+    }
+    @media screen and (max-width: 800px) {
+      max-width: 100%;
+    }
+  }
+}

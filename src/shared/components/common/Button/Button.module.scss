@@ -1,0 +1,134 @@
+@import '../../../styles/variables/grid';
+@import '../../../styles/variables/typography';
+@import '../../../styles/variables/colors';
+@import '../../../styles/variables/common';
+
+.button {
+  padding: 10px 38px;
+  width: 100%;
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  margin: 10px 0;
+  max-width: 450px;
+
+  background: $white;
+  border: 2px solid $primary;
+  border-radius: 15px;
+  box-sizing: border-box;
+  cursor: pointer;
+  min-height: 55px;
+
+  font-style: normal;
+  font-weight: normal;
+  font-size: $button-font-size-mobile;
+  line-height: $button-line-height-mobile;
+  color: $black;
+  text-align: center;
+  text-transform: uppercase;
+
+  &,
+  svg path {
+    transition: all 0.3s ease;
+  }
+
+  &:not(.text-uppercase) {
+    font-size: $button-font-size;
+    line-height: $button-line-height;
+  }
+
+  &.text-uppercase {
+    font-size: $button-font-size-mobile;
+    line-height: $button-line-height-mobile;
+
+    @media #{$breakpoint-md-up} {
+      height: 60px;
+      font-size: $button-font-size-desktop;
+      line-height: $button-line-height-desktop;
+    }
+  }
+
+  &.withIcon {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+
+    &.iconLeft {
+      flex-direction: row-reverse;
+    }
+    &.iconCenter {
+      justify-content: center;
+      min-width: fit-content;
+      min-height: fit-content;
+      padding: 10px;
+    }
+  }
+
+  &:hover {
+    color: $primary;
+    svg path {
+      stroke: $primary;
+    }
+  }
+
+  &:disabled {
+    color: $black;
+    background: $white;
+    opacity: 0.2;
+  }
+
+  &.primary {
+    color: $white;
+    border: none;
+    background: $gradient-4;
+
+    svg path {
+      stroke: $white;
+    }
+
+    &:hover {
+      box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    &:disabled {
+      color: $white;
+      background: $primary;
+      opacity: 0.2;
+    }
+  }
+
+  &.danger {
+    background-color: var(--red);
+    color: white;
+    border-color: var(--red);
+  }
+}
+
+a.button {
+  color: $black !important;
+  &:hover {
+    color: $primary !important;
+    opacity: 1;
+  }
+
+  &.primary {
+    color: $white !important;
+  }
+}
+
+.textButton {
+    background: inherit;
+    border: none;
+    color: #4455EA;
+    font-weight: 600;
+    font-size: 0.8125rem;
+    line-height: 1.75;
+    text-align: center;
+    text-transform: uppercase;
+    box-sizing: border-box;
+    cursor: pointer;
+    min-height: 55px;
+    max-width: 450px;
+}

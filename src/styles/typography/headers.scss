@@ -1,0 +1,100 @@
+@import '../../styles/variables/grid';
+@import '../../styles/variables/typography';
+@import '../../styles/variables/colors';
+
+//noinspection DuplicatedCode
+h1,
+.h1 {
+  margin: 0 0 1em;
+  font-style: normal;
+  font-weight: 500;
+  font-size: $h1-font-size-mobile;
+  line-height: $h1-line-height-mobile;
+  color: $black;
+  text-align: left;
+  text-transform: uppercase;
+
+  @media #{$breakpoint-md-up} {
+    margin: 0 0 2vw;
+    font-weight: normal;
+    font-size: $h1-font-size-desktop;
+    line-height: $h1-line-height-desktop;
+    text-align: center;
+  }
+}
+
+//noinspection DuplicatedCode
+h2,
+.h2 {
+  margin: 2rem 0;
+  font-style: normal;
+  font-weight: normal;
+  font-size: $h2-font-size-mobile;
+  line-height: $h2-line-height-mobile;
+  color: $black;
+  text-align: left;
+  text-transform: uppercase;
+
+  @media #{$breakpoint-md-up} {
+    margin: 1.5vw 0 1vw;
+    font-size: $h2-font-size-desktop;
+    line-height: $h2-line-height-desktop;
+    font-weight: normal;
+    font-weight: 500;
+  }
+}
+
+//noinspection DuplicatedCode
+h3,
+.h3 {
+  margin: 0 0 2em;
+  font-style: normal;
+  font-weight: normal;
+  font-size: $h3-font-size-mobile;
+  line-height: $h3-line-height-mobile;
+  color: $black;
+  text-align: left;
+  text-transform: uppercase;
+
+  @media #{$breakpoint-md-up} {
+    margin: 0 0 4vw;
+    font-size: $h3-font-size-desktop;
+    line-height: $h3-line-height-desktop;
+  }
+}
+
+.scope {
+  display: flex;
+  margin-bottom: 8vw;
+  padding-top: 0;
+  padding-bottom: 0;
+  box-sizing: border-box;
+
+  &__image {
+    flex: 1 1 auto;
+    padding: 0 1rem;
+    text-align: center;
+    box-sizing: border-box;
+
+    img {
+      width: auto;
+      max-height: 200px;
+    }
+  }
+
+  &__description {
+    flex: 0 1 auto;
+    padding: 0 1rem;
+    text-align: left;
+    box-sizing: border-box;
+  }
+
+  @media #{$breakpoint-lg-up} {
+    flex-wrap: nowrap;
+    margin-bottom: 4vw;
+
+    &__image {
+      flex-grow: 0;
+    }
+  }
+}

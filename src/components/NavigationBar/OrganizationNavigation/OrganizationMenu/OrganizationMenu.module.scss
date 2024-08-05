@@ -1,0 +1,58 @@
+@import '../../../../styles/variables/common';
+
+.OrganizationMenu {
+  display: grid;
+  grid-template-rows: auto 1fr;
+  grid-template-areas: 'list' 'footer';
+  align-self: end;
+  height: calc(calc(var(--vh, 1vh) * 100) - 100px);
+
+  .OrganizationList {
+    display: grid;
+    background-color: inherit;
+    overflow-y: auto;
+    overflow-x: hidden;
+    grid-area: list;
+    .OrganizationItem {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      list-style-type: none;
+      position: relative;
+      height: 80px;
+      align-self: center;
+      justify-self: center;
+
+      .Title {
+        display: none;
+      }
+      &:hover > .Title {
+        display: initial;
+        font-size: 10px;
+        text-align: center;
+        width: calc(#{$sidebar-size-desktop} - 10px);
+        text-transform: uppercase;
+        color: var(--primary-color);
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        cursor: pointer;
+      }
+    }
+  }
+  .footer {
+    grid-area: footer;
+    align-self: end;
+    justify-self: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: inherit;
+    margin-bottom: 20px;
+    cursor: pointer;
+    .label {
+      margin: 0;
+      text-align: center;
+    }
+  }
+}

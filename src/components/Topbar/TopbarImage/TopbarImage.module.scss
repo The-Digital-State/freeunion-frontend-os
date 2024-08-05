@@ -1,0 +1,27 @@
+@import '../../../styles/variables/colors';
+@import '../../../styles/variables/grid';
+
+.TopbarImage {
+  width: 100px;
+  height: 100px;
+
+  @media #{$breakpoint-lg-up} {
+    width: 160px;
+    height: 160px;
+  }
+
+  border-radius: 50%;
+  background-color: $gray-1;
+  position: relative;
+  color: white;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.socialNetwork {
+  position: absolute;
+  top: 8px;
+  right: 4px;
+}

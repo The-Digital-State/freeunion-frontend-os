@@ -1,0 +1,21 @@
+.video-container {
+  width: 100%;
+  height: 0;
+  padding-bottom: 56.25%;
+  position: relative;
+  margin: 0;
+}
+
+.video-wrapper {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  .content-video {
+    width: 100%;
+    height: 100%;
+    border: none;
+    border-radius: 15px;
+  }
+}

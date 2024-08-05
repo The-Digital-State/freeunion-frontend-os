@@ -1,0 +1,78 @@
+@import '../../styles/variables/colors';
+@import '../../styles/variables/grid';
+
+.cookies {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 1em;
+  color: $white;
+  background: $secondary;
+
+  @media #{$breakpoint-sm-up} {
+    padding: 1em 2em;
+  }
+
+  @media #{$breakpoint-lg-up} {
+    padding: 40px 80px;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  @media #{$breakpoint-xl-up} {
+    padding: 40px 120px;
+  }
+
+  &__hide {
+    display: none;
+  }
+
+  .h3 {
+    margin: 0 0 1em;
+    font-size: 25px;
+    line-height: normal;
+    color: $white;
+
+    @media #{$breakpoint-lg-up} {
+      flex: 0 1 auto;
+      margin: 0;
+    }
+  }
+
+  &__actions {
+    text-align: center;
+
+    @media #{$breakpoint-sm-up} {
+      flex: 0 0 auto;
+      display: flex;
+      flex-wrap: nowrap;
+      align-items: center;
+    }
+
+    .btn {
+      color: $white;
+      background: none;
+      border-color: $white;
+
+      @media #{$breakpoint-lg-up} {
+        width: 280px;
+      }
+
+      @media #{$breakpoint-xl-up} {
+        width: 420px;
+      }
+
+      &.primary {
+        color: $black;
+        background: $white;
+      }
+    }
+
+    span {
+      margin: 0 1em;
+    }
+  }
+}

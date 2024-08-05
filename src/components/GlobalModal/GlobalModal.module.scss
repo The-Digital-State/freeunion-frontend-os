@@ -1,0 +1,59 @@
+@import '../../styles/variables/common';
+@import '../../styles/variables/colors';
+@import '../../styles/variables/grid';
+
+.background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: calc(var(--vh, 1vh) * 100);
+  width: 100vw;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 50;
+}
+.GlobalModal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: calc(var(--vh, 1vh) * 100);
+  width: 100vw;
+  padding: 40px 0;
+  display: flex;
+  overflow-y: auto;
+  z-index: 100;
+
+  main {
+    position: relative;
+    background-color: $white;
+    border-radius: $border-radius;
+    min-width: 20vw;
+    min-height: 20vh;
+    max-width: 80vw;
+    margin: auto;
+    padding: 20px;
+    @media screen and (max-width: 764px) {
+      max-width: 90vw;
+      padding: 15px;
+    }
+
+    .close {
+      position: absolute;
+      top: 15px;
+      right: 15px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+      z-index: 100;
+
+      border-radius: 50%;
+      @media screen and (max-width: 500px) {
+        top: 8px;
+        right: 8px;
+      }
+    }
+    button {
+      margin: 0 auto;
+    }
+  }
+}

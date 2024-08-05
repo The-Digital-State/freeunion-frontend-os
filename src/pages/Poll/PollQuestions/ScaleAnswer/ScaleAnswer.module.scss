@@ -1,0 +1,51 @@
+.main {
+  margin: 20px 0;
+  .textMinMax {
+    margin-top: 10px;
+    font-size: 20px;
+    text-transform: lowercase;
+    margin-left: 15px;
+  }
+}
+
+.wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+
+  .wrapperStar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0px;
+    .wrapperIcon {
+      border: none;
+      padding: 0 10px;
+      margin: 0;
+      background: transparent;
+      height: 29px;
+
+      & > svg {
+        cursor: pointer;
+      }
+
+      &:hover {
+        & > svg {
+          & > path {
+            stroke: #828ecc;
+            fill: #828ecc;
+          }
+        }
+      }
+    }
+  }
+  .isActive {
+    & > svg {
+      & > path {
+        stroke: #828ecc;
+        fill: #828ecc;
+      }
+    }
+  }
+}

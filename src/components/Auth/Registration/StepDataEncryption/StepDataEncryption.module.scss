@@ -1,0 +1,55 @@
+@import '../../../../styles/variables/grid';
+
+.StepDataEncryption {
+  height: 100%;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+
+  @media #{$breakpoint-sm-up} {
+    margin: 0 auto;
+    width: 650px;
+  }
+
+  .content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    .publicName {
+      text-align: center;
+      color: var(--red);
+      margin-top: 2rem;
+      font-weight: 500;
+    }
+
+    @media #{$breakpoint-md-up} {
+      flex-direction: row;
+      align-content: flex-end;
+      flex-wrap: wrap;
+      padding-bottom: 50px;
+
+      .icon,
+      p {
+        flex: 1;
+        align-self: center;
+      }
+
+      .publicName {
+        width: 100%;
+        order: -1;
+        margin-bottom: 30px;
+      }
+    }
+    .icon {
+      display: flex;
+      justify-content: center;
+    }
+
+    p {
+      margin-top: 2rem;
+      margin-left: 1rem;
+    }
+  }
+}

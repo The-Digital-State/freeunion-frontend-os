@@ -1,0 +1,10 @@
+@import '../../styles/variables/common';
+@import '../../styles/variables/colors';
+@import '../../styles/variables/grid';
+@import '../../styles/variables/indention';
+@import '../../styles/variables/typography';
+
+.list {
+  display: grid;
+  grid-template-rows: repeat(3, 1fr);
+}

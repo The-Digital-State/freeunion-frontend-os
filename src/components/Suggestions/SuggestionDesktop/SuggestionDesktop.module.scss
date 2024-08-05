@@ -1,0 +1,61 @@
+@import 'src/styles/variables/common';
+
+.SuggestionDesktop {
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  > div {
+    margin-bottom: 1rem;
+  }
+  .titleAvatarWrapper {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+    h3 {
+      height: fit-content;
+    }
+  }
+  h4 {
+    display: inline;
+    margin-right: 5px;
+    color: gray;
+    font-weight: normal;
+  }
+  .avatar {
+    height: 60px;
+    margin-right: 15px;
+  }
+  .goalDescription {
+    text-transform: lowercase;
+  }
+  .wrapperDesctiptionDoug {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    width: 100%;
+  }
+  .footer {
+    display: flex;
+    flex-direction: column;
+    .buttonMore {
+      background-color: transparent;
+    }
+    .changeButton {
+      display: flex;
+      align-self: flex-start;
+      button {
+        margin-right: 10px;
+        color: var(--primary-color);
+        border: none;
+        padding: 0;
+        background: transparent;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+}

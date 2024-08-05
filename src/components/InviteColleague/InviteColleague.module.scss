@@ -1,0 +1,128 @@
+@import "../../styles/variables/grid";
+@import "../../styles/variables/common";
+@import "../../styles/variables/colors";
+@import "../../styles/variables/indention";
+
+.InviteColleague {
+  overflow: auto;
+
+  @media #{$breakpoint-lg-up} {
+    display: grid;
+    justify-content: initial;
+    grid-template-areas: "logo header header" "content content content" "actions actions actions";
+    grid-template-columns: 180px 4fr 180px;
+    grid-template-rows: auto 1fr;
+    grid-row-gap: $grid-gap;
+  }
+
+  @media #{$breakpoint-xxl-up} {
+    grid-template-areas: "logo header header" "content content content" "actions actions actions";
+    grid-template-columns: 200px 4fr 200px;
+    grid-template-rows: auto 1fr;
+  }
+
+  .inviteOrganisation {
+    grid-column: 2 / span 1;
+
+    margin-top: 15px;
+    margin-bottom: 25px;
+  }
+
+  .content {
+    grid-area: content;
+
+    @media #{$breakpoint-xl-up} {
+      grid-column: 2 / span 1;
+    }
+
+    display: grid;
+    grid-auto-rows: min-content;
+    align-content: center;
+
+    grid-row-gap: $grid-gap;
+
+    .card {
+      background-color: $gray-1;
+      border-radius: $border-radius;
+
+      & > div {
+        display: grid;
+
+        @media #{$breakpoint-md-up} {
+          grid-template-columns: minmax(auto, 150px) 1fr;
+        }
+
+        &:first-child {
+          margin-bottom: $space-desktop;
+        }
+      }
+
+      .icon {
+        display: none;
+
+        @media #{$breakpoint-md-up} {
+          display: initial;
+        }
+      }
+
+      .info {
+        @media #{$breakpoint-xl-up} {
+          padding-right: 150px;
+        }
+      }
+    }
+
+    .linkCopied {
+      background-color: $white;
+      display: flex;
+      flex-direction: column;
+
+      .icon {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 113px;
+        height: 113px;
+        border-radius: 50%;
+        border: 3px solid $red;
+      }
+
+      .link {
+        border-radius: $border-radius;
+        background-color: $gray-1;
+        padding: 1rem;
+
+        word-break: break-all;
+      }
+    }
+  }
+
+  .actions {
+    grid-area: actions;
+    margin-top: 1rem;
+
+    footer {
+      width: 100%;
+    }
+
+    @media #{$breakpoint-lg-up} {
+      display: flex;
+      justify-content: space-between;
+      margin: 0;
+    }
+
+    button {
+      @media #{$breakpoint-sm-only-max} {
+        margin-bottom: $space-mobile;
+      }
+
+      @media #{$breakpoint-md-up} {
+        margin-right: $space-desktop;
+      }
+
+      @media #{$breakpoint-lg-up} {
+        max-width: 35rem;
+      }
+    }
+  }
+}

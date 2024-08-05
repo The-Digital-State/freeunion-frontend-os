@@ -1,0 +1,98 @@
+@import '/src/styles/variables/common';
+
+.container {
+  position: relative;
+  height: 260px;
+  width: 100%;
+  .organisationAvatar {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    margin-right: 3rem;
+    z-index: 15;
+
+    @media screen and (max-width: 450px) {
+      align-self: center;
+    }
+
+    .chatIcon {
+      position: absolute;
+      left: 40px;
+      top: -5px;
+      z-index: 1;
+    }
+
+    @media #{$breakpoint-md-only-max} {
+      display: grid;
+      justify-content: center;
+
+      .chatIcon {
+        display: grid;
+        justify-content: center;
+        width: 100%;
+        left: 40px;
+      }
+    }
+  }
+}
+
+.imageBlock {
+  position: absolute;
+  opacity: 0;
+  display: none;
+  width: 100%;
+}
+
+.appear {
+  display: block;
+  opacity: 0;
+}
+
+.appearActive {
+  display: block;
+  opacity: 1;
+  transition: opacity 1s ease-in;
+}
+
+.appearDone {
+  display: block;
+  opacity: 1;
+}
+
+.enter {
+  display: block;
+  opacity: 0;
+}
+
+.enterActive {
+  opacity: 1;
+  display: block;
+  transition: opacity 1s ease-in;
+}
+
+.enterDone {
+  opacity: 1;
+  display: block;
+}
+
+.exit {
+  opacity: 1;
+  display: block;
+}
+
+.exitActive {
+  opacity: 0;
+  display: block;
+  transition: opacity 1s ease-in;
+}
+
+.exitDone {
+  display: none;
+}
+
+.bannerStyle img {
+  border-radius: 15px 15px 0 0 !important;
+  @media screen and (max-width: 764px) {
+    border-radius: 0 !important;
+  }
+}

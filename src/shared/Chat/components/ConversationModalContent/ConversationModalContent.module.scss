@@ -1,0 +1,87 @@
+.button {
+  background-color: unset;
+  border: unset;
+  padding: 0;
+  position: relative;
+  width: fit-content;
+  margin: 0 auto;
+  height: 100%;
+  .count {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin-top: -5px;
+    background-color: crimson;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+    font-size: 12px;
+  }
+}
+
+.wrapper {
+  position: fixed;
+  max-height: 600px;
+  width: 350px;
+  overflow-y: auto;
+  z-index: 100;
+  background: #fafafa;
+  padding: 8px;
+
+  > p {
+    margin-top: 20px;
+    margin-left: 20px;
+  }
+
+  .btn_close {
+    position: absolute;
+    right: 15px;
+    top: 15px;
+    height: auto;
+    display: flex;
+    padding: 0;
+    width: fit-content;
+  }
+
+  li {
+    display: flex;
+    padding: 8px;
+
+    > svg {
+      margin-right: 16px;
+    }
+
+    > p {
+      font-size: 15px;
+      line-height: 30px;
+    }
+  }
+
+  img {
+    border-radius: 50%;
+    height: 55px;
+    width: 55px;
+  }
+
+  background-color: #f5f6fa;
+  box-shadow: 0 0 5px #93959d;
+  border-radius: 10px;
+
+  &::-webkit-scrollbar {
+    width: 5px;
+  }
+
+  &::-webkit-scrollbar-track {
+    margin: 8px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    max-height: 50%;
+    height: 50%;
+    background-color: #dcdde3;
+  }
+}

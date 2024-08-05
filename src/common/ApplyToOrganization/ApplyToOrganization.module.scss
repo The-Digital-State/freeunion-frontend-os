@@ -1,0 +1,35 @@
+@import '../../styles/variables/colors';
+
+.ApplyToOrganization {
+  background-color: $gray-1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  .phase {
+    width: 155px;
+    height: 155px;
+    border-radius: 50%;
+    overflow: hidden;
+  }
+
+  .top {
+    height: 50%;
+    background-color: $red;
+    color: $white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .bottom {
+    height: 50%;
+    background-color: $white;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 16px;
+    line-height: 19px;
+  }
+}

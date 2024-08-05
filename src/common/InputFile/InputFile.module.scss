@@ -1,0 +1,94 @@
+@import '../../styles/variables/grid';
+@import '../../styles/variables/typography';
+@import '../../styles/variables/colors';
+
+.InputFile {
+  padding: 0;
+  height: 100%;
+
+  &.disabled {
+    label {
+      pointer-events: none !important;
+    }
+  }
+
+  .formGroupFile {
+    position: relative;
+    height: 100%;
+
+    .btn:not(.noLabel) {
+      button {
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
+      }
+    }
+
+    &:hover {
+      button {
+        opacity: 0.7;
+      }
+    }
+
+    label {
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      vertical-align: middle;
+      padding: 23px 30px 19px;
+      display: inline-flex;
+      cursor: pointer;
+    }
+
+    input[type='file'] {
+      width: 0.1px;
+      height: 0.1px;
+      opacity: 0;
+      overflow: hidden;
+      position: absolute;
+      z-index: -1;
+    }
+
+    .inputFile {
+      position: relative;
+      padding: 23px 30px 19px;
+      width: 100%;
+      font-style: normal;
+      font-weight: normal;
+      font-size: $text-fields-font-size-mobile;
+      line-height: $text-fields-line-height-mobile;
+      color: $black;
+      background: $text-field-bg;
+      border: none;
+      border-radius: 15px;
+      box-sizing: border-box;
+      outline: none;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+
+      @media #{$breakpoint-sm-up} {
+        padding-right: 210px;
+      }
+
+      @media #{$breakpoint-md-up} {
+        font-size: $text-fields-font-size-desktop;
+        line-height: $text-fields-line-height-desktop;
+      }
+    }
+
+    .btn {
+      position: absolute;
+      top: 0;
+      right: 0;
+      margin: 0;
+      width: 200px;
+      border-top-left-radius: 0;
+      border-bottom-left-radius: 0;
+
+      &.noLabel {
+        width: 100%;
+      }
+    }
+  }
+}

@@ -1,0 +1,34 @@
+@import 'src/styles/variables/colors';
+@import 'src/styles/variables/common';
+
+.closeButtonHover {
+  border: none;
+  background: transparent;
+  & svg line {
+    transition: all 0.3s ease;
+  }
+
+  &:hover {
+    & svg line {
+      stroke: var(--primary-color) !important;
+    }
+  }
+}
+
+.CloseButton {
+  all: inherit;
+  position: fixed;
+  top: 15px;
+  right: 0;
+  cursor: pointer;
+  z-index: 10;
+  height: auto;
+  width: 40px;
+  background: transparent;
+  box-shadow: none;
+  @media #{$breakpoint-md-up} {
+    top: 40px;
+
+    width: $sidebar-size-desktop;
+  }
+}

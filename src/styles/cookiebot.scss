@@ -1,0 +1,84 @@
+@import 'src/styles/typography/common';
+@import 'src/styles/typography/headers';
+@import 'src/styles/variables/colors';
+@import 'src/styles/variables/common';
+
+#CybotCookiebotDialog {
+  //some comment
+  & > * {
+    font-style: normal;
+    font-weight: normal;
+    outline: none;
+  }
+
+  & #CybotCookiebotDialogBodyContentText a,
+  & #CybotCookiebotDialogBodyLevelButtonIABHeaderViewPartnersLink,
+  & #CybotCookiebotDialogDetailBulkConsentList dt a,
+  & #CybotCookiebotDialogDetailFooter a,
+  & .CybotCookiebotDialogBodyLevelButtonIABDescription a,
+  & .CybotCookiebotDialogDetailBodyContentCookieLink,
+  #CybotCookiebotDialogDetailBodyContentTextAbout a {
+    color: $red !important;
+  }
+
+  #CybotCookiebotDialogBodyEdgeMoreDetails a {
+    color: $red !important;
+  }
+
+  #CybotCookiebotDialogNav .CybotCookiebotDialogNavItemLink {
+    font-size: $font-size-mobile;
+    line-height: $line-height-mobile;
+    text-transform: uppercase;
+
+    &.active {
+      border-bottom: 3px solid $red;
+      color: $red;
+    }
+
+    &:not(.active) {
+      opacity: 0.7;
+    }
+  }
+
+  #CybotCookiebotDialogTabContent {
+    .CybotCookiebotDialogBodyLevelButtonSlider {
+      background-color: $gray-2;
+      width: 57px;
+    }
+
+    input:checked + .CybotCookiebotDialogBodyLevelButtonSlider {
+      background-color: $red !important;
+    }
+
+    input[type='checkbox'][disabled]:checked + .CybotCookiebotDialogBodyLevelButtonSlider {
+      pointer-events: none;
+      background-color: #d6d6d6 !important;
+    }
+  }
+
+  #CybotCookiebotDialogFooter .CybotCookiebotDialogBodyButton {
+    border: 3px solid $red;
+    border-radius: $border-radius;
+    font-size: $button-font-size;
+    line-height: $button-line-height-desktop;
+    text-transform: uppercase;
+    padding: 0;
+    align-items: center;
+  }
+
+  #CybotCookiebotDialogFooter #CybotCookiebotDialogBodyButtonAccept,
+  #CybotCookiebotDialogFooter #CybotCookiebotDialogBodyLevelButtonAccept,
+  #CybotCookiebotDialogFooter #CybotCookiebotDialogBodyLevelButtonLevelOptinAllowAll {
+    background-color: $red;
+  }
+
+  & .CookieCard .CybotCookiebotDialogDetailBodyContentCookieContainerButton:hover,
+  & .CookieCard .CybotCookiebotDialogDetailBodyContentIABv2Tab:hover,
+  #CybotCookiebotDialogBodyLevelButtonsSelectPane
+    label:not([for='CybotCookiebotDialogBodyLevelButtonNecessary'])
+    .CybotCookiebotDialogBodyLevelButtonDescription:hover,
+  #CybotCookiebotDialogDetailBodyContentCookieContainerTypes
+    .CybotCookiebotDialogDetailBodyContentCookieProvider:not(.CybotCookiebotDialogDetailBodyContentCookieInfoCount):hover {
+    color: $red !important;
+  }
+}

@@ -1,0 +1,120 @@
+@import '../../styles/variables/colors';
+@import '../../styles/variables/grid';
+@import '../../styles/variables/typography';
+
+$width: 300px;
+$header-width: $width;
+$header-avatar-width: 85px;
+$header-info-width: 205px;
+$main-avatar-width: 90px;
+$main-info-width: 160px;
+$main-status-width: 50px;
+
+.header {
+  display: grid;
+  grid-template-columns: $header-avatar-width $header-info-width;
+  gap: 10px;
+  @media #{$breakpoint-xs-only} {
+    grid-template-columns: none;
+  }
+  .avatar {
+    all: inherit;
+    width: $header-avatar-width;
+    position: relative;
+    justify-self: end;
+    align-self: center;
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+
+    .verificationPosition {
+      position: absolute;
+      z-index: 1;
+      left: 0;
+      top: -5px;
+    }
+
+    & > div {
+      opacity: 1;
+      transition: opacity 0.3s ease;
+    }
+
+    &:hover {
+      .editIcon {
+        opacity: 1;
+      }
+      & > div {
+        opacity: 0.7;
+      }
+    }
+
+    @media #{$breakpoint-xs-only} {
+      justify-self: start;
+      margin-bottom: 10px;
+    }
+
+    .editIcon {
+      position: absolute;
+      top: 25px;
+      z-index: 11;
+      opacity: 0;
+      transition: all 0.3s ease;
+    }
+    .hovered {
+      opacity: 1;
+    }
+  }
+  .info {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    justify-content: center;
+    width: $header-info-width;
+    @media #{$breakpoint-xs-only} {
+      margin-left: 0;
+    }
+
+    .role,
+    .rating,
+    .title {
+      width: calc(#{$header-info-width} - 10px);
+      margin: 0;
+      font-size: $font-size-2-desktop;
+      line-height: $line-height-2-desktop;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      span {
+        color: var(--primary-color);
+      }
+
+      .ratingNumber {
+        margin-right: 5px;
+        color: #171719;
+        line-height: initial;
+      }
+    }
+
+    .title {
+      font-weight: 500;
+    }
+    .description {
+      font-size: $font-size-desktop;
+      line-height: 24px;
+      font-weight: normal;
+      color: $primary;
+    }
+  }
+}
+
+.headerTopBar {
+  grid-template-columns: $header-avatar-width 1fr;
+
+  .info {
+    width: auto;
+    .title {
+      overflow: visible;
+      width: auto;
+    }
+  }
+}

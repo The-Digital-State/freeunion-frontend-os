@@ -1,0 +1,29 @@
+.wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  align-items: flex-end;
+  width: 100%;
+}
+
+.inputWrapper {
+  width: 100%;
+
+  input {
+    border: 1px solid #ccc  !important;
+  }
+}
+.header {
+  align-items: 'center'; 
+  display: flex;
+  justify-Content: space-between;
+}
+
+.editor {
+  color: black;
+  margin-top: 24px;
+}
+
+.section {
+  margin-top: 24px;
+}

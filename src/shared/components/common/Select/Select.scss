@@ -1,0 +1,158 @@
+@import 'shared/styles/variables/grid';
+@import 'shared/styles/variables/typography';
+@import 'shared/styles/variables/colors';
+@import 'shared/styles/variables/common';
+@import 'shared/styles/variables/indention';
+
+$padding-left: 27px;
+$padding-right: 50px;
+$border-width: 3px;
+
+.select {
+  height: 60px;
+  position: relative;
+  padding: 20px $padding-right 20px $padding-left;
+  width: 100%;
+  font-size: $text-fields-font-size-mobile;
+  line-height: $text-fields-line-height-mobile;
+  color: $black;
+  background: $text-field-bg;
+  border-radius: 15px;
+  border: 3px solid $text-field-bg;
+  box-sizing: border-box;
+  cursor: pointer;
+
+  span {
+    position: absolute;
+    left: $padding-left;
+    right: $padding-right;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+  }
+
+  @media #{$breakpoint-md-up} {
+    font-size: $text-fields-font-size-desktop;
+    line-height: $text-fields-font-size-desktop;
+  }
+
+  &:after {
+    content: '';
+    position: absolute;
+    top: 27px;
+    right: 20px;
+    width: 12px;
+    height: 7px;
+    background: url('../../../public/icon-dropdown.svg');
+  }
+
+  &__options {
+    height: fit-content;
+    position: absolute;
+    display: none;
+    width: calc(100% + 6px);
+    margin-left: -$border-width;
+    background: $text-field-bg;
+    border-style: solid;
+    border-color: $white;
+    border-width: 0 $border-width $border-width $border-width;
+    border-bottom-left-radius: $border-radius;
+    border-bottom-right-radius: $border-radius;
+    overflow: hidden;
+    cursor: pointer;
+    padding: 0 28px $space-mobile 30px;
+
+    @media #{$breakpoint-lg-up} {
+      padding: 0 32px 1rem 30px;
+    }
+  }
+
+  &__scroll {
+    padding-right: 10px;
+    width: 100%;
+    max-height: 450px;
+    overflow-y: auto;
+  }
+
+  &__option {
+    margin-bottom: 10px;
+    width: 100%;
+    opacity: 0.6;
+    vertical-align: middle;
+    display: flex;
+
+    background: unset;
+    border: unset;
+    padding-left: 0;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    &.selected,
+    &:hover {
+      opacity: 1;
+    }
+
+    .icon {
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      width: 28px;
+      min-width: 28px;
+      height: 28px;
+      background-color: $white;
+      border-radius: 50%;
+      border: 3px solid $gray-2;
+      margin-right: 16px;
+    }
+  }
+
+  &__scroller {
+    position: absolute;
+    top: 15px;
+    bottom: 15px;
+    right: 29px;
+    width: 3px;
+    background: $white;
+  }
+
+  &__scroll-slider {
+    position: absolute;
+    width: 3px;
+    background: $black;
+  }
+}
+
+.form-group__select {
+  &.opened {
+    label {
+      user-select: none;
+      z-index: 5 !important;
+    }
+
+    .select {
+      border-bottom-left-radius: 0;
+      border-bottom-right-radius: 0;
+
+      &:after {
+        transform: scaleY(-1);
+      }
+
+      &__options {
+        display: block;
+        z-index: 2;
+      }
+    }
+  }
+}
+
+//.select__options:not(.multiselect) {
+//  .select__scroll {
+//    .select__option:before {
+//      content: '•';
+//      margin-right: 0.5rem;
+//    }
+//
+//  }
+//}

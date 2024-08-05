@@ -1,0 +1,128 @@
+@import '../../../styles/variables/colors';
+
+.form-group__checkbox {
+  box-sizing: border-box;
+  position: relative;
+  margin: 20px 10px;
+
+  label {
+    position: relative;
+    top: 0;
+    left: 0;
+    display: flex;
+    opacity: 1;
+    cursor: pointer;
+    height: 23px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    input {
+      display: none;
+
+      &:checked + span:after {
+        visibility: visible;
+      }
+    }
+
+    span {
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+
+      &:before {
+        content: '';
+        display: inline-block;
+        border: 2px solid $gray-2;
+        border-radius: 50%;
+        box-sizing: border-box;
+        margin-right: 10px;
+      }
+
+      &:after {
+        content: '';
+        position: absolute;
+
+        width: 20px;
+        height: 20px;
+        background-color: $black;
+        mask-size: 16px;
+        mask-repeat: no-repeat;
+        mask-image: url('../../../../shared/public/icons/check.svg');
+        box-sizing: border-box;
+        visibility: hidden;
+        border-radius: unset !important;
+      }
+    }
+  }
+
+  &.error {
+    span:before {
+      border-color: var(--red);
+    }
+  }
+}
+
+.large span::before {
+  min-width: 50px;
+  height: 50px;
+}
+
+.large span::after {
+  top: 5px;
+  left: 17px;
+}
+
+.small span::before {
+  min-width: 30px;
+  height: 30px;
+}
+
+.small span::after {
+  top: 6px;
+  left: 6px;
+}
+
+.square {
+  margin: 10px;
+  span {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+
+    &:before {
+      width: 20px;
+      min-width: 20px;
+      height: 20px;
+      content: '';
+      top: 2px !important;
+      display: inline-block;
+      border-radius: 4px !important;
+      border-color: #828ecc !important;
+      border: 1.5px solid #828ecc;
+      box-sizing: border-box;
+      margin-right: 10px;
+    }
+
+    &:after {
+      width: 10px !important;
+      height: 10px !important;
+      background-color: #828ecc !important;
+      mask-size: 10px !important;
+      top: 6px !important;
+      left: 5px !important;
+    }
+  }
+}
+.dark {
+  span {
+    &:before {
+      border-color: #292D32 !important;
+    }
+
+    &:after {
+      background-color: #292D32 !important;
+    }
+  }
+}

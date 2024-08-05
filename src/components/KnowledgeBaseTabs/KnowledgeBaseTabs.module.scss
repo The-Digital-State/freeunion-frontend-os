@@ -1,0 +1,19 @@
+.wrapperItem {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  flex-shrink: 1;
+  overflow-x: auto;
+  overflow-y: auto;
+  max-height: none;
+  padding: 20px;
+  background: var(--primary-bg-trans-15);
+  @media screen and (max-width: 764px) {
+    padding: 10px;
+    width: auto;
+  }
+}
+
+.wrapper {
+  width: 100%;
+}

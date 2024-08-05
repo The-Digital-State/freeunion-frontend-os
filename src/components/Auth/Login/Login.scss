@@ -1,0 +1,52 @@
+@import '../../../styles/variables/grid';
+@import '../../../styles/variables/common';
+@import '../../../styles/variables/colors';
+
+p {
+  margin-bottom: 1rem;
+}
+.Login {
+  form {
+    margin-top: 20px;
+  }
+
+  @media #{$breakpoint-lg-up} {
+    width: 520px;
+  }
+
+  .form-group {
+    padding: 0;
+  }
+
+  .enter-buttons-wrapper {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    .button-login {
+      margin-right: 20px;
+    }
+    @media screen and (max-width: 520px) {
+      flex-direction: column;
+      .button-login {
+        margin-right: 0;
+      }
+      button {
+        width: 100%;
+      }
+    }
+  }
+  .secondary-links-wrapper {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    .register {
+      margin-right: 20px;
+    }
+    @media screen and (max-width: 520px) {
+      justify-content: space-between;
+      .register {
+        margin-right: 0px;
+      }
+    }
+  }
+}

@@ -1,0 +1,14 @@
+@import 'src/styles/variables/grid';
+@import 'src/styles/variables/common';
+
+.WelcomeActions {
+  scroll-snap-type: y mandatory;
+}
+
+:global(html.autoscroll)
+//body,
+//.Profile
+{
+  // -webkit-scroll-snap-type: y proximity;
+  // scroll-snap-type: y proximity;
+}

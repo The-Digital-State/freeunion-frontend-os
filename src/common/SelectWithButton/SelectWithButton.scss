@@ -1,0 +1,62 @@
+@import 'src/styles/variables/grid';
+@import 'src/styles/variables/colors';
+@import 'src/styles/variables/common';
+@import 'src/styles/variables/indention';
+
+.SelectWithButton {
+  display: grid;
+  grid-template-rows: 1fr auto;
+  transition: height $animation-duration;
+
+  @media #{$breakpoint-md-up} {
+    grid-template-rows: none;
+    grid-template-columns: 2fr 1fr;
+    background-color: initial;
+
+    button {
+      margin: 0;
+      border-bottom-left-radius: 0 !important;
+      border-top-left-radius: 0 !important;
+    }
+  }
+
+  .form-group {
+    @media #{$breakpoint-sm-only-max} {
+      margin-bottom: 0;
+    }
+
+    .select {
+      border-radius: 0;
+    }
+
+    .select__options {
+      @media #{$breakpoint-sm-only-max} {
+        position: static !important;
+        border: none;
+        border-radius: 0;
+        overflow: hidden;
+
+        .select__scroll {
+          max-height: none;
+          height: min-content;
+        }
+      }
+    }
+  }
+
+  .button-container {
+    @media #{$breakpoint-sm-only-max} {
+      background-color: $gray-1;
+
+      padding-bottom: 1rem;
+      margin-bottom: 1rem;
+    }
+
+    &.d-none {
+      display: block !important;
+      @media #{$breakpoint-sm-only-max} {
+        display: none !important;
+      }
+    }
+  }
+}

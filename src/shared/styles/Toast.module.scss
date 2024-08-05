@@ -1,0 +1,37 @@
+@import '../styles/variables/colors';
+@import '../styles/variables/common';
+
+.Toastify__toast {
+  border-radius: $border-radius;
+  background-color: $gray-1;
+  padding-top: 3px;
+}
+
+.Toastify__toast-body {
+  color: $black;
+  font-size: 13px;
+  line-height: 24px;
+}
+
+.Toastify__close-button > svg {
+  color: $black;
+}
+
+.toastProgressBar {
+  background: $primary;
+  bottom: -0.5px;
+}
+
+.notification {
+  * {
+    color: black;
+  }
+  h6 {
+    margin: 0;
+    font-size: 16px;
+  }
+
+  p {
+    margin-bottom: 0;
+  }
+}

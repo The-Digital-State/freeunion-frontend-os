@@ -1,0 +1,33 @@
+@import '../../styles/variables/common';
+@import '../../styles/variables/colors';
+
+.DrawerContainer {
+  position: fixed;
+  top: 0;
+  width: 0;
+  height: 0;
+  .Drawer {
+    width: 300px;
+    height: calc(var(--vh, 1vh) * 100);
+    background-color: $gray-1;
+    transition: transform $animation-duration;
+    &.open {
+      transform: none !important;
+    }
+
+    &.left {
+      left: 0;
+      transform: translateX(-100%);
+    }
+
+    &.right {
+      right: 0;
+      transform: translateX(100%);
+    }
+  }
+}
+
+.DrawerOpen {
+  width: 100%;
+  height: 100%;
+}

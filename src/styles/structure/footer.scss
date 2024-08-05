@@ -1,0 +1,82 @@
+@import '../../styles/variables/grid';
+@import '../../styles/variables/colors';
+
+.footer {
+  margin-top: 50px;
+  font-size: 0.8rem;
+
+  @media #{$breakpoint-sm-up} {
+    margin-top: 140px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  @media #{$breakpoint-xl-up} {
+    font-size: 1rem;
+  }
+
+  &__logo {
+    margin-bottom: 50px;
+    text-align: center;
+
+    @media #{$breakpoint-sm-up} {
+      flex: 0 0 auto;
+      margin: 0;
+      text-align: left;
+
+      img {
+        height: 100%;
+      }
+    }
+
+    img {
+      &.logo {
+        display: none;
+      }
+
+      @media #{$breakpoint-md-up} {
+        &.logo {
+          display: inline;
+        }
+
+        &.logo-small {
+          display: none;
+        }
+      }
+    }
+  }
+
+  &__links {
+    @media #{$breakpoint-sm-up} {
+      flex: 0 0 auto;
+      align-self: center;
+    }
+
+    @media #{$breakpoint-xl-up} {
+      display: flex;
+      flex-wrap: nowrap;
+    }
+
+    a,
+    p {
+      margin-bottom: 14px;
+      display: block;
+      line-height: 2;
+      color: $black;
+      text-transform: uppercase;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+
+      @media #{$breakpoint-xl-up} {
+        margin: 0 60px 0;
+        text-transform: none;
+
+        &:last-child {
+          margin-right: 0;
+        }
+      }
+    }
+  }
+}
